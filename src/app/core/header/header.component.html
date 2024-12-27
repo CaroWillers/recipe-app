@@ -18,87 +18,54 @@
 		</button>
 
 		<!-- Navigation -->
-		<nav class="main-nav">
-			<ul>
-				<!-- Spoonfuls Dropdown -->
-        <li
-        class="dropdown"
-        [class.active]="isActive('/recipes/soups', '/recipes/stews')"
-        [class.open]="dropdownStates['Spoonfuls']"
-	    	(click)="toggleDropdown('Spoonfuls')"
-        (mouseenter)="toggleDropdown('Spoonfuls')"
-        (mouseleave)="dropdownStates['Spoonfuls'] = false"
-      >
-        <a href="javascript:void(0)" (click)="toggleDropdown('Spoonfuls')">Spoonfuls</a>
-        <ul class="dropdown-menu" *ngIf="dropdownStates['Spoonfuls']">
-          <li>
-            <a routerLink="/recipes/soups" routerLinkActive="active">Suppen</a>
-          </li>
-          <li>
-            <a routerLink="/recipes/stews" routerLinkActive="active">Eintöpfe</a>
-          </li>
-        </ul>
-      </li>
+<nav class="main-nav">
+  <!-- Spoonfuls Dropdown -->
+  <button mat-button [matMenuTriggerFor]="spoonfulsMenu" class="custom-button">
+    Spoonfuls
+    <mat-icon >arrow_drop_down</mat-icon>
+  </button>
+  <mat-menu #spoonfulsMenu="matMenu" class="custom-menu">
+    <button mat-menu-item routerLink="/recipes/soups">Suppen</button>
+    <button mat-menu-item routerLink="/recipes/stews">Eintöpfe</button>
+  </mat-menu>
 
-				<!-- Casseroles -->
-				<li class="dropdown" [class.active]="isActive('/recipes/casseroles')">
-					<a routerlink="/recipes/casseroles" routerlinkactive="active">Aufläufe</a>
-				</li>
+  <!-- Aufläufe -->
+  <button mat-button routerLink="/recipes/casseroles" class="custom-button">
+    Aufläufe
+  </button>
 
-				<!-- Pasta -->
-				<li class="dropdown" [class.active]="isActive('/recipes/pasta')">
-					<a routerlink="/recipes/pasta" routerlinkactive="active">Pasta</a>
-				</li>
+  <!-- Pasta -->
+  <button mat-button routerLink="/recipes/pasta" class="custom-button">
+    Pasta
+  </button>
 
-				<!-- Hauptgerichte Dropdown -->
-        <li
-        class="dropdown"
-        [class.active]="isActive('/recipes/meat', '/recipes/fish', '/recipes/veggie')"
-        [class.open]="dropdownStates['Hauptgerichte']"
-        (mouseenter)="toggleDropdown('Hauptgerichte')"
-        (mouseleave)="dropdownStates['Hauptgerichte'] = false"
-      >
-      <a href="javascript:void(0)" (click)="toggleDropdown('Hauptgerichte')">Hauptgerichte</a>
-					<ul class="dropdown-menu" *ngIf="dropdownStates['Hauptgerichte']">
-						<li>
-							<a routerlink="/recipes/meat" routerlinkactive="active">Fleisch</a>
-						</li>
-						<li>
-							<a routerlink="/recipes/fish" routerlinkactive="active">Fisch</a>
-						</li>
-						<li>
-							<a routerlink="/recipes/veggie" routerlinkactive="active">Veggie</a>
-						</li>
-					</ul>
-				</li>
+  <!-- Hauptgerichte Dropdown -->
+  <button mat-button [matMenuTriggerFor]="mainDishesMenu" class="custom-button">
+    Hauptgerichte
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  <mat-menu #mainDishesMenu="matMenu" class="custom-menu">
+    <button mat-menu-item routerLink="/recipes/meat">Fleisch</button>
+    <button mat-menu-item routerLink="/recipes/fish">Fisch</button>
+    <button mat-menu-item routerLink="/recipes/veggie">Veggie</button>
+  </mat-menu>
 
-				<!-- Desserts -->
-				<li class="dropdown" [class.active]="isActive('/recipes/desserts')">
-					<a routerlink="/recipes/desserts" routerlinkactive="active">Desserts</a>
-				</li>
+  <!-- Desserts -->
+  <button mat-button routerLink="/recipes/desserts" class="custom-button">
+    Desserts
+  </button>
 
-				<!-- Backen Dropdown -->
-				<li 
-          class="dropdown" 
-          [class.active]="isActive('/recipes/baking-sweet', '/recipes/baking-savory', '/recipes/christmas')" 
-          [class.open]="dropdownStates['Backen']"  
-          (mouseenter)="toggleDropdown('Backen')"
-          (mouseleave)="dropdownStates['Backen'] = false"
-          >
-					<a>Backen</a>
-					<ul class="dropdown-menu"  *ngIf="dropdownStates['Backen']">
-						<li>
-							<a routerlink="/recipes/baking-sweet" routerlinkactive="active">Süß</a>
-						</li>
-						<li>
-							<a routerlink="/recipes/baking-savory" routerlinkactive="active">Herzhaft</a>
-						</li>
-						<li>
-							<a routerlink="/recipes/christmas" routerlinkactive="active">Weihnachten</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
+  <!-- Backen Dropdown -->
+  <button mat-button [matMenuTriggerFor]="bakingMenu" class="custom-button">
+    Backen
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  <mat-menu #bakingMenu="matMenu" class="custom-menu">
+    <button mat-menu-item routerLink="/recipes/baking-sweet">Süß</button>
+    <button mat-menu-item routerLink="/recipes/baking-savory">Herzhaft</button>
+    <button mat-menu-item routerLink="/recipes/christmas">Weihnachten</button>
+  </mat-menu>
+</nav>
+
 	</div>
 </header>

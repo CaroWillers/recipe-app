@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection, NgModule } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser'; 
@@ -11,6 +11,10 @@ import { getFunctions, provideFunctions } from '@angular/fire/functions';
 import { getMessaging, provideMessaging } from '@angular/fire/messaging';
 import { getPerformance, providePerformance } from '@angular/fire/performance';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialModule } from './shared/material.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 // Firebase configuration object
 const firebaseConfig = {
@@ -23,6 +27,10 @@ const firebaseConfig = {
   measurementId: "G-M314DMYXM1"
 };
 
+@NgModule({
+  imports: [MaterialModule, MatIconModule, MatMenuModule],
+})
+export class AppModule {}
 export const appConfig: ApplicationConfig = {
   providers: [
     // Optimize change detection
@@ -65,6 +73,6 @@ export const appConfig: ApplicationConfig = {
     providePerformance(() => getPerformance()),
     
     // Firebase Storage
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()), provideAnimationsAsync(), provideAnimationsAsync()
   ],
 };

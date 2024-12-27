@@ -68,79 +68,48 @@
 
   /* Navigation */ 
   .main-nav {
-    ul {
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      font-size: 20px;
-      font-weight: 500;
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    background-color: #9fad86; /* Haupt-Hintergrundfarbe */
+    padding: 10px 20px;
+    font-family: 'Raleway', sans-serif;
+  }
   
-      .dropdown {
-        position: relative;
-        cursor: pointer; 
+    button {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      color: #fff7de; /* Offwhite */
+      text-transform: none; /* Keine Großbuchstaben */
+    }
   
-        a {
-          text-decoration: none;
-          color: #fff7de;  
-          padding: 10px 15px;
-          transition: all 0.3s ease-in-out;
-
-          &.active > a {
-            text-decoration:underline;
-            color: #8c0404; 
-          }
-  
-          &:hover {
-            color: #8c0404;  
-          }
-        }
-   
-  
-        .dropdown-menu {
-          display: none;
-          position: absolute;
-          top: 150%;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 120px;
-          background-color: #fff7de;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          list-style: none;
-          padding: 10px;
-          z-index: 100;
-  
-          li {
-            margin: 12px 0;
-  
-            a {
-              text-decoration: none;
-              color: #9fad86;  
-              text-align: center;
-              font-weight: bold;
-              font-size: 16px;
-              transition: color 0.3s ease;
-  
-              &:hover,
-              &.active { 
-                color: #8c0404; /* Red */
-              }
-            }
-          }
-        }
-  
-        &.open .dropdown-menu  {
-          display: block;
-        }
+    button:hover {
+      color: #8c0404; /* Rot */
+    }
+    .custom-button {
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #fff7de !important;
+      font-weight: 600;
+      text-transform: none;
+    
+      &:hover {
+        color: #8c0404 !important;
       }
     }
-  }
+
+    .custom-menu { 
+      margin-left: 15px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      color: #8c0404 !important;
+      font-weight: 600;
+      text-transform: none;
+    }
+    
+  
   
 
-  @media (max-width: 768px) {
-    .dropdown-menu {
-      width: 100px;  
-    }
-  }
+ 
+  
   
