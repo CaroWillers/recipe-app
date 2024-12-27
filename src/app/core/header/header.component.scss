@@ -1,0 +1,147 @@
+/* Header */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.header { 
+    background-color: #9FAD86;  
+    color: #FFF7DE;  
+    padding: 10px 20px;
+    font-family: 'Raleway', sans-serif;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+}
+  
+.search-bar-desktop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  margin: 0 auto 20px;  
+  justify-content: space-between;
+  padding: 10px;
+}
+.logo {
+  width: 350px;
+  height: 130px; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img { 
+    object-fit: cover;
+    overflow: hidden;
+    }
+  }
+
+  input {
+    cursor: pointer;
+    width: 300px;
+    padding: 17.5px 45px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 42px;
+    background: #FFF7DE;  
+    color: #8C0404;  
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .search input:focus {
+    border-color: #8C0404;
+    box-shadow: 0 0 5px rgba(200, 90, 84, 0.5);
+  }
+
+  /* Navigation */ 
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -20px;
+
+  ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  }
+
+  .dropdown {
+    width: 100px;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: #fff7de;  
+      padding: 10px 15px; 
+      transition: all 0.3s ease-in-out; 
+
+      &:hover {
+        color: #8c0404;  
+        border-radius: 8px 8px 0 0;
+        background-color: #fff7de;  
+      }
+    }
+
+    &.active {
+      color: #8c0404;  
+      border-bottom: 3px solid #8c0404; 
+      border-radius: 0 0 8px 8px;
+      background-color: #fff7de;  
+    }
+
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+    /* Dropdown-Menü Styling */
+    .dropdown-menu {
+      width: 100px;
+      display: none;
+      position: absolute;
+      top: 150%; 
+      left: 0;
+      background-color: #fff7de;  
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      padding: 10px;
+      z-index: 100;
+  
+      li {
+        margin: 5px 0;
+  
+        a {
+          text-decoration: none;
+          color: #9fad86; /* Green */
+          font-weight: bold;
+          font-size: 16px;
+          transition: color 0.3s ease;
+  
+          &:hover,
+          &.active { 
+            color: #8c0404;  
+          }
+        }
+      }
+    } 
+    
