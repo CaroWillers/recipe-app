@@ -1,1 +1,68 @@
-<p>home works!</p>
+<main>
+    <!-- Section 1: "Recipe of the Day" -->
+    <section id="start" class="recipe-of-the-day">
+      <div id="section-start-left">
+        <img class="teaser-image" src="assets/img/Lachs-Tatar.png" alt="Spargel-Lachs-Tartar">
+      </div>
+      <div id="section-start-right">
+        <h2>Spargel-Lachs-Tartar</h2>
+        <p>Klingt exotisch - Schmeckt fantastisch - Und ist leichter zubereitet, als man denkt ...</p>
+        <p>Dieses tolle Sommer Rezept eignet sich sehr gut für Gäste, da es natürlich auch optisch toll aussieht und besonders ist. Einfach mal ausprobieren. Wir wünschen Euch gutes Gelingen!</p>
+        <button class="green-link-button">Rezept öffnen</button>
+      </div>
+    </section>
+  
+    <!-- Teaser - "New Recipes" -->
+    <section id="new-recipes" class="section-new-recipes">
+      <div class="headline-new-recipes">
+        <h2>Lust auf was Neues?</h2>
+      </div>
+      <div class="new-recipes-container">
+        <a routerLink="/recipes/linguine" class="new-recipes">
+          <figure>
+            <img class="new-recipes-img" src="assets/img/Linguine-teaser.png" alt="Linguine mit Zucchini">
+            <figcaption>Linguine mit Zucchini</figcaption>
+          </figure>
+        </a>
+        <a routerLink="/recipes/spaghetti-bolognese" class="new-recipes">
+          <figure>
+            <img class="new-recipes-img" src="assets/img/spaghetti-bolognes-1920x.jpg" alt="Spaghetti Bolognese">
+            <figcaption>Spaghetti Bolognese</figcaption>
+          </figure>
+        </a>
+        <a routerLink="/recipes/mandelkuchen" class="new-recipes">
+          <figure>
+            <img class="new-recipes-img" src="assets/img/Nusskuchen-Detail.png" alt="Mandelkuchen">
+            <figcaption>Mandelkuchen</figcaption>
+          </figure>
+        </a>
+      </div>
+    </section>
+  
+    <!-- Section 3: Tips -->
+    <section id="tips" class="tips">
+      <div class="tips-content">
+        <div class="text-and-buttons">
+          <h2 id="tips-heading">Pfanne vs. Wok - Was ist besser?</h2>
+          <p id="tips-text">
+            Für die gute alte Bratpfanne spricht die größere Kontaktfläche,
+            die sie bietet und auf der gebraten werden kann. Für mehrere
+            Spiegeleier, größere Fisch- oder Fleischstücke etc. ist da die
+            Pfanne deutlich dem Wok in Sachen Fläche überlegen.
+            <br />
+            Wenn es jedoch darum geht kleinere - und vielleicht auch viele
+            verschiedene - Leckereien zu braten, kann der Wok die bessere Wahl
+            sein.
+          </p>
+          <div class="tips-button-container">
+            <button class="tips-btn-stop-resume" id="tips-btn-stop">Stopp</button>
+            <button class="tips-btn-stop-resume hide-btn-slider" id="tips-btn-resume">Weiter</button>
+          </div>
+        </div>
+        <div class="img-container">
+          <img id="tips-img" class="tips-img" src="assets/img/wok.jpg" alt="Tipps rund um Wok und Pfanne">
+        </div>
+      </div>
+    </section>
+  </main>
+  

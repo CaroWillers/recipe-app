@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchService } from '../../services/search.service'; 
 import { FormsModule } from '@angular/forms';
@@ -19,16 +19,24 @@ export class HeaderComponent {
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
-
+  // Öffnen/Schließen eines Dropdowns
   toggleDropdown(menu: string): void {
-    // Setzt den aktuellen Dropdown auf sichtbar und schließt andere
     Object.keys(this.dropdownStates).forEach((key) => {
       this.dropdownStates[key] = key === menu ? !this.dropdownStates[key] : false;
     });
   }
 
+  // Alle Dropdowns schließen, wenn außerhalb geklickt wird
+  @HostListener('document:click', ['$event'])
+  closeAllDropdowns(event: Event): void {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.dropdown')) {
+      this.dropdownStates = {};
+    }
+  }
+
+  // Überprüft, ob ein Menüpunkt aktiv ist
   isActive(...routes: string[]): boolean {
-    // Überprüft, ob eine der übergebenen Routen aktiv ist
     return routes.some((route) => this.router.url.includes(route));
   }
 }

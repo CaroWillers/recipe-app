@@ -1,101 +1,104 @@
 <header class="header">
-  <div class="container">
-    <!-- Suchleiste -->
-    <div class="search-bar-desktop">
-      <div class="logo">
-        <img src="assets/logo%20spoonful/LogoAnotherSpoonfulGreen.png" alt="Logo von Another Spoonful" />
-      </div>
-      <div class="search-input-container">
-        <input
-          type="text"
-          placeholder="Finde Dein Rezept"
-          [(ngModel)]="searchService.searchQuery"
-          (keyup)="searchService.onSearch()"
-        />
-        <img src="assets/icons/search-grey.svg" alt="Such-Icon" class="search-icon" />
-      </div>
-    </div>
+	<div
+		class="container">
+		<!-- Suchleiste -->
+		<div class="search-bar-desktop">
+			<div class="logo">
+				<img src="assets/logo/LogoAnotherSpoonfulGreen.png" alt="Logo von Another Spoonful"/>
+			</div>
+			<div class="search-input-container">
+				<input type="text" placeholder="Finde Dein Rezept" [(ngModel)]="searchService.searchQuery" (keyup)="searchService.onSearch()"/>
+				<img src="assets/icons/search-grey.svg" alt="Such-Icon" class="search-icon"/>
+			</div>
+		</div>
 
-    <!-- Burger-Menü -->
-    <button class="menu-toggle" (click)="toggleMenu()">
-      <img src="assets/icons/burger.png" alt="Burger-Menü" />
-    </button>
+		<!-- Burger-Menü -->
+		<button class="menu-toggle" (click)="toggleMenu()">
+			<img src="assets/icons/burger.png" alt="Burger-Menü"/>
+		</button>
 
-    <!-- Navigation -->
-    <nav class="main-nav" [class.open]="menuOpen">
-      <ul>
-        <!-- Spoonfuls Dropdown -->
+		<!-- Navigation -->
+		<nav class="main-nav">
+			<ul>
+				<!-- Spoonfuls Dropdown -->
         <li
-          class="dropdown"
-          [class.active]="isActive('/recipes/soups', '/recipes/stews')"
-          [class.open]="dropdownStates['Spoonfuls']"
-        >
-          <a href="javascript:void(0)" (click)="toggleDropdown('Spoonfuls')">Spoonfuls</a>
-          <ul class="dropdown-menu">
-            <li>
-              <a routerLink="/recipes/soups" routerLinkActive="active">Suppen</a>
-            </li>
-            <li>
-              <a routerLink="/recipes/stews" routerLinkActive="active">Eintöpfe</a>
-            </li>
-          </ul>
-        </li>
+        class="dropdown"
+        [class.active]="isActive('/recipes/soups', '/recipes/stews')"
+        [class.open]="dropdownStates['Spoonfuls']"
+	    	(click)="toggleDropdown('Spoonfuls')"
+        (mouseenter)="toggleDropdown('Spoonfuls')"
+        (mouseleave)="dropdownStates['Spoonfuls'] = false"
+      >
+        <a href="javascript:void(0)" (click)="toggleDropdown('Spoonfuls')">Spoonfuls</a>
+        <ul class="dropdown-menu" *ngIf="dropdownStates['Spoonfuls']">
+          <li>
+            <a routerLink="/recipes/soups" routerLinkActive="active">Suppen</a>
+          </li>
+          <li>
+            <a routerLink="/recipes/stews" routerLinkActive="active">Eintöpfe</a>
+          </li>
+        </ul>
+      </li>
 
-        <!-- Casseroles -->
-        <li  class="dropdown" [class.active]="isActive('/recipes/casseroles')">
-          <a routerLink="/recipes/casseroles" routerLinkActive="active">Aufläufe</a>
-        </li>
+				<!-- Casseroles -->
+				<li class="dropdown" [class.active]="isActive('/recipes/casseroles')">
+					<a routerlink="/recipes/casseroles" routerlinkactive="active">Aufläufe</a>
+				</li>
 
-        <!-- Pasta -->
-        <li  class="dropdown" [class.active]="isActive('/recipes/pasta')">
-          <a routerLink="/recipes/pasta" routerLinkActive="active">Pasta</a>
-        </li>
+				<!-- Pasta -->
+				<li class="dropdown" [class.active]="isActive('/recipes/pasta')">
+					<a routerlink="/recipes/pasta" routerlinkactive="active">Pasta</a>
+				</li>
 
-        <!-- Hauptgerichte Dropdown -->
+				<!-- Hauptgerichte Dropdown -->
         <li
-          class="dropdown"
-          [class.active]="isActive('/recipes/meat', '/recipes/fish', '/recipes/veggie')"
-          [class.open]="dropdownStates['Hauptgerichte']"
-        >
-          <a href="javascript:void(0)" (click)="toggleDropdown('Hauptgerichte')">Hauptgerichte</a>
-          <ul class="dropdown-menu">
-            <li>
-              <a routerLink="/recipes/meat" routerLinkActive="active">Fleisch</a>
-            </li>
-            <li>
-              <a routerLink="/recipes/fish" routerLinkActive="active">Fisch</a>
-            </li>
-            <li>
-              <a routerLink="/recipes/veggie" routerLinkActive="active">Veggie</a>
-            </li>
-          </ul>
-        </li>
+        class="dropdown"
+        [class.active]="isActive('/recipes/meat', '/recipes/fish', '/recipes/veggie')"
+        [class.open]="dropdownStates['Hauptgerichte']"
+        (mouseenter)="toggleDropdown('Hauptgerichte')"
+        (mouseleave)="dropdownStates['Hauptgerichte'] = false"
+      >
+      <a href="javascript:void(0)" (click)="toggleDropdown('Hauptgerichte')">Hauptgerichte</a>
+					<ul class="dropdown-menu" *ngIf="dropdownStates['Hauptgerichte']">
+						<li>
+							<a routerlink="/recipes/meat" routerlinkactive="active">Fleisch</a>
+						</li>
+						<li>
+							<a routerlink="/recipes/fish" routerlinkactive="active">Fisch</a>
+						</li>
+						<li>
+							<a routerlink="/recipes/veggie" routerlinkactive="active">Veggie</a>
+						</li>
+					</ul>
+				</li>
 
-        <!-- Dessert -->
-        <li  class="dropdown" [class.active]="isActive('/recipes/desserts')">
-          <a routerLink="/recipes/desserts" routerLinkActive="active">Desserts</a>
-        </li>
+				<!-- Desserts -->
+				<li class="dropdown" [class.active]="isActive('/recipes/desserts')">
+					<a routerlink="/recipes/desserts" routerlinkactive="active">Desserts</a>
+				</li>
 
-        <!-- Backen Dropdown -->
-        <li
-          class="dropdown"
-          [class.active]="isActive('/recipes/baking-sweet', '/recipes/baking-savory', '/recipes/christmas')"
-          [class.open]="dropdownStates['Backen']"
-        >
-          <a href="javascript:void(0)" (click)="toggleDropdown('Backen')">Backen</a>
-          <ul class="dropdown-menu">
-            <li>
-              <a routerLink="/recipes/baking-sweet" routerLinkActive="active">Süß</a>
-            </li>
-            <li>
-              <a routerLink="/recipes/baking-savory" routerLinkActive="active">Herzhaft</a>
-            </li>
-            <li>
-              <a routerLink="/recipes/christmas" routerLinkActive="active">Weihnachten</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
+				<!-- Backen Dropdown -->
+				<li 
+          class="dropdown" 
+          [class.active]="isActive('/recipes/baking-sweet', '/recipes/baking-savory', '/recipes/christmas')" 
+          [class.open]="dropdownStates['Backen']"  
+          (mouseenter)="toggleDropdown('Backen')"
+          (mouseleave)="dropdownStates['Backen'] = false"
+          >
+					<a>Backen</a>
+					<ul class="dropdown-menu"  *ngIf="dropdownStates['Backen']">
+						<li>
+							<a routerlink="/recipes/baking-sweet" routerlinkactive="active">Süß</a>
+						</li>
+						<li>
+							<a routerlink="/recipes/baking-savory" routerlinkactive="active">Herzhaft</a>
+						</li>
+						<li>
+							<a routerlink="/recipes/christmas" routerlinkactive="active">Weihnachten</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
 </header>

@@ -1,0 +1,160 @@
+/* General styles */
+main {
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+  }
+  
+  section {
+    padding: 0 12.5%;
+  }
+  
+  /* Section 1: Recipe of the Day */
+  .recipe-of-the-day {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5vw;
+    padding: 7vw 0;
+  
+    #section-start-left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .teaser-image {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 8px;
+      }
+    }
+  
+    #section-start-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+  
+      h2 {
+        font-size: 2rem;
+        color: #8c0404;
+      }
+  
+      p {
+        margin: 0.5em 0;
+        line-height: 1.5;
+      }
+  
+      .green-link-button {
+        margin-top: 1em;
+        background-color: #9fad86;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 8px;
+  
+        &:hover {
+          background-color: #008000d6;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+  /* Section 2: New Recipes */
+  .section-new-recipes {
+    background-color: #f5f5f5;
+    padding: 2em 0;
+  
+    .headline-new-recipes {
+      text-align: center;
+  
+      h2 {
+        font-size: 2rem;
+        color: #333;
+      }
+    }
+  
+    .new-recipes-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 2em;
+  
+      .new-recipes {
+        text-decoration: none;
+        color: #333;
+  
+        figure {
+          text-align: center;
+  
+          .new-recipes-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+          }
+  
+          figcaption {
+            margin-top: 0.5em;
+            font-size: 1rem;
+            font-weight: bold;
+          }
+        }
+  
+        &:hover figcaption {
+          color: #8c0404;
+        }
+      }
+    }
+  }
+  
+  /* Section 3: Tips */
+  .tips {
+    margin: 3em 0;
+  
+    .tips-content {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+  
+      #tips-heading {
+        font-size: 2rem;
+        color: #333;
+      }
+  
+      #tips-text {
+        line-height: 1.6;
+        font-size: 1rem;
+        color: #666;
+      }
+  
+      .tips-button-container {
+        display: flex;
+        gap: 1em;
+  
+        .tips-btn-stop-resume {
+          background-color: #9fad86;
+          color: #fff;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 8px;
+  
+          &:hover {
+            background-color: #008000d6;
+            cursor: pointer;
+          }
+        }
+  
+        .hide-btn-slider {
+          display: none;
+        }
+      }
+  
+      .img-container {
+        img {
+          width: 300px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  
