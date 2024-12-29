@@ -1,51 +1,58 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
-import "./chunk-CES2DSV7.js";
+import "./chunk-G4IEWC7Q.js";
 import {
-  APP_INITIALIZER,
+  Component,
+  ErrorFactory,
   FirebaseApp,
   FirebaseApps,
+  VERSION,
+  _getProvider,
+  _registerComponent,
+  areCookiesEnabled,
+  getApp,
+  getModularInstance,
+  isIndexedDBAvailable,
+  registerVersion,
+  validateIndexedDBOpenable,
+  ɵAngularFireSchedulers,
+  ɵgetAllInstancesOf,
+  ɵgetDefaultInstanceOf,
+  ɵisSupportedError,
+  ɵzoneWrap
+} from "./chunk-6PTL4ZSU.js";
+import {
+  deleteDB,
+  openDB
+} from "./chunk-7VRS26CX.js";
+import {
+  APP_INITIALIZER,
   InjectionToken,
   Injector,
   NgModule,
   NgZone,
   Optional,
-  VERSION,
   makeEnvironmentProviders,
-  require_cjs,
-  require_operators,
   setClassMetadata,
-  ɵAngularFireSchedulers,
-  ɵgetAllInstancesOf,
-  ɵgetDefaultInstanceOf,
-  ɵisSupportedError,
-  ɵzoneWrap,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-7ECVHOZG.js";
+} from "./chunk-UJYRLOQU.js";
 import {
-  Component,
-  ErrorFactory,
-  _getProvider,
-  _registerComponent,
-  areCookiesEnabled,
-  deleteDB,
-  getApp,
-  getModularInstance,
-  isIndexedDBAvailable,
-  openDB,
-  registerVersion,
-  validateIndexedDBOpenable
-} from "./chunk-SVMIUNMI.js";
+  require_cjs
+} from "./chunk-CKN2QDU6.js";
+import {
+  require_operators
+} from "./chunk-RKKF6KD2.js";
+import "./chunk-VBHR3Y32.js";
 import {
   __async,
   __toESM
 } from "./chunk-INDP74QC.js";
 
-// ../node_modules/@angular/fire/fesm2022/angular-fire-messaging.mjs
+// node_modules/@angular/fire/fesm2022/angular-fire-messaging.mjs
 var import_rxjs = __toESM(require_cjs(), 1);
 var import_operators = __toESM(require_operators(), 1);
 
-// ../node_modules/@firebase/messaging/dist/esm/index.esm2017.js
+// node_modules/@angular/fire/node_modules/@firebase/messaging/dist/esm/index.esm2017.js
 var DEFAULT_SW_PATH = "/firebase-messaging-sw.js";
 var DEFAULT_SW_SCOPE = "/firebase-cloud-messaging-push-scope";
 var DEFAULT_VAPID_KEY = "BDOU99-h67HcA6JeFXHbSNMu7e2yNNu3RzoMj8TM4W88jITfq7ZmPvIM1Iv-4_l2LxQcYwhqby2xGpWwzjfAnG4";
@@ -842,7 +849,7 @@ function onMessage(messaging, nextOrObserver) {
 }
 registerMessagingInWindow();
 
-// ../node_modules/@angular/fire/fesm2022/angular-fire-messaging.mjs
+// node_modules/@angular/fire/fesm2022/angular-fire-messaging.mjs
 var Messaging = class {
   constructor(messaging) {
     return messaging;

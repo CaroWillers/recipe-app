@@ -47,15 +47,7 @@ export const appConfig: ApplicationConfig = {
     
     // Firebase Authentication
     provideAuth(() => getAuth()),
-    
-    // Firebase App Check with ReCaptcha Enterprise
-    provideAppCheck(() => {
-      const provider = new ReCaptchaEnterpriseProvider('your-recaptcha-enterprise-site-key');
-      return initializeAppCheck(undefined, {
-        provider,
-        isTokenAutoRefreshEnabled: true,
-      });
-    }),
+
     
     // Firebase Firestore
     provideFirestore(() => getFirestore()),

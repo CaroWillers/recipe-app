@@ -1,1 +1,60 @@
-<p>recipe-detail works!</p>
+<div class="container"> 
+<main *ngIf="recipe$ | async as recipe; else loading">
+  <!-- Rezeptübersicht -->
+  <section class="recipe-overview">
+    <h1>{{ recipe?.title }}</h1>
+    <img class="recipe-intro-img" [src]="recipe.image" [alt]="recipe.title" />
+    <div class="recipe-intro-overview">
+      <span class="icon-span">
+        <img class="icon" src="assets/icons/clock-regular.svg" alt="Zubereitungszeit" />
+        {{ recipe.prepTime }} Min.
+      </span>
+      <span class="icon-span">
+        <img class="icon" src="assets/icons/brain.svg" alt="Schwierigkeit" />
+        Simpel
+      </span>
+    </div>
+  </section>
+
+  <!-- Zutatenrechner -->
+  <section class="ingredients-calculator">
+    <h2 class="ingredients-title">Zutatenrechner</h2>
+    <div class="calculator">
+      <label for="number-of-serves" class="label-calculator">Zutaten für:</label>
+      <div class="input-group">
+        <input
+          id="number-of-serves"
+          type="number"
+          class="input-serves"
+          [(ngModel)]="portion"
+          (input)="onPortionChange()"
+          min="1"
+          placeholder="Portionen"
+        />
+        <button class="button-start-calculating" (click)="onPortionChange()">Berechnen</button>
+      </div>
+    </div>
+
+  <!-- Zubereitung -->
+  <table class="ingredients-table">
+    <thead>
+      <tr>
+        <th>Zutaten</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ingredient of adjustedIngredients">
+        <td>{{ ingredient }}</td>
+      </tr>
+    </tbody>
+  </table>
+    <ol>
+      <li *ngFor="let step of recipe.instructions">{{ step }}</li>
+    </ol>
+  </section>
+</main>
+
+<ng-template #loading>
+  <p>Lädt...</p>
+</ng-template>
+</div>

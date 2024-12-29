@@ -18,19 +18,19 @@
         <h2>Lust auf was Neues?</h2>
       </div>
       <div class="new-recipes-container">
-        <a routerLink="/recipes/linguine" class="new-recipes">
+        <a [routerLink]="['/recipes', 'linguine']" class="new-recipes" aria-label="Linguine mit Zucchini Rezept">
           <figure>
             <img class="new-recipes-img" src="assets/img/Linguine-teaser.png" alt="Linguine mit Zucchini">
             <figcaption>Linguine mit Zucchini</figcaption>
           </figure>
         </a>
-        <a routerLink="/recipes/spaghetti-bolognese" class="new-recipes">
+        <a routerLink="/recipes/spaghetti-bolognese" class="new-recipes" aria-label="Spaghetti Bolognese Rezept">
           <figure>
             <img class="new-recipes-img" src="assets/img/spaghetti-bolognes-1920x.jpg" alt="Spaghetti Bolognese">
             <figcaption>Spaghetti Bolognese</figcaption>
           </figure>
         </a>
-        <a routerLink="/recipes/mandelkuchen" class="new-recipes">
+        <a routerLink="/recipes/mandelkuchen" class="new-recipes" aria-label="Mandelkuchen Rezept">
           <figure>
             <img class="new-recipes-img" src="assets/img/Nusskuchen-Detail.png" alt="Mandelkuchen">
             <figcaption>Mandelkuchen</figcaption>
@@ -38,6 +38,7 @@
         </a>
       </div>
     </section>
+    
   
     <!-- Section 3: Tips -->
     <section id="tips" class="tips">

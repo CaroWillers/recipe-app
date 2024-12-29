@@ -2,57 +2,68 @@ import { createRequire } from 'module';const require = createRequire(import.meta
 import {
   AuthInstances,
   require_undici
-} from "./chunk-RCD3BR5R.js";
+} from "./chunk-EZRXWW4U.js";
 import {
-  FirebaseApp,
-  FirebaseApps,
-  InjectionToken,
-  Injector,
-  NgModule,
-  NgZone,
-  Optional,
-  VERSION,
-  makeEnvironmentProviders,
-  require_cjs,
-  require_operators,
-  setClassMetadata,
-  ɵAngularFireSchedulers,
-  ɵAppCheckInstances,
-  ɵgetAllInstancesOf,
-  ɵgetDefaultInstanceOf,
-  ɵzoneWrap,
-  ɵɵdefineInjector,
-  ɵɵdefineNgModule
-} from "./chunk-7ECVHOZG.js";
+  Component as Component2,
+  FirebaseError as FirebaseError2,
+  SDK_VERSION as SDK_VERSION2,
+  _registerComponent as _registerComponent2,
+  registerVersion as registerVersion2
+} from "./chunk-E4JJKUET.js";
 import {
   Component,
+  FirebaseApp,
+  FirebaseApps,
   FirebaseError,
   SDK_VERSION,
+  VERSION,
   _getProvider,
   _registerComponent,
   createMockUserToken,
   getApp,
   getDefaultEmulatorHostnameAndPort,
   getModularInstance,
-  registerVersion
-} from "./chunk-SVMIUNMI.js";
+  registerVersion,
+  ɵAngularFireSchedulers,
+  ɵAppCheckInstances,
+  ɵgetAllInstancesOf,
+  ɵgetDefaultInstanceOf,
+  ɵzoneWrap
+} from "./chunk-6PTL4ZSU.js";
+import "./chunk-7VRS26CX.js";
+import {
+  InjectionToken,
+  Injector,
+  NgModule,
+  NgZone,
+  Optional,
+  makeEnvironmentProviders,
+  setClassMetadata,
+  ɵɵdefineInjector,
+  ɵɵdefineNgModule
+} from "./chunk-UJYRLOQU.js";
+import {
+  require_cjs
+} from "./chunk-CKN2QDU6.js";
+import {
+  require_operators
+} from "./chunk-RKKF6KD2.js";
+import "./chunk-VBHR3Y32.js";
 import {
   __async,
   __toESM
 } from "./chunk-INDP74QC.js";
 
-// ../node_modules/@angular/fire/fesm2022/angular-fire-storage.mjs
+// node_modules/@angular/fire/fesm2022/angular-fire-storage.mjs
 var import_rxjs2 = __toESM(require_cjs(), 1);
 var import_operators2 = __toESM(require_operators(), 1);
 
-// ../node_modules/@firebase/storage/dist/node-esm/index.node.esm.js
-var import_undici = __toESM(require_undici());
+// node_modules/@firebase/storage/dist/node-esm/index.node.esm.js
 var DEFAULT_HOST = "firebasestorage.googleapis.com";
 var CONFIG_STORAGE_BUCKET_KEY = "storageBucket";
 var DEFAULT_MAX_OPERATION_RETRY_TIME = 2 * 60 * 1e3;
 var DEFAULT_MAX_UPLOAD_RETRY_TIME = 10 * 60 * 1e3;
-var DEFAULT_MIN_SLEEP_TIME_MILLIS = 1e3;
-var StorageError = class _StorageError extends FirebaseError {
+var StorageError = class _StorageError extends FirebaseError2 {
   /**
    * @param code - A `StorageErrorCode` string to be prefixed with 'storage/' and
    *  added to the end of the message.
@@ -97,32 +108,32 @@ ${this.customData.serverResponse}`;
   }
 };
 var StorageErrorCode;
-(function(StorageErrorCode2) {
-  StorageErrorCode2["UNKNOWN"] = "unknown";
-  StorageErrorCode2["OBJECT_NOT_FOUND"] = "object-not-found";
-  StorageErrorCode2["BUCKET_NOT_FOUND"] = "bucket-not-found";
-  StorageErrorCode2["PROJECT_NOT_FOUND"] = "project-not-found";
-  StorageErrorCode2["QUOTA_EXCEEDED"] = "quota-exceeded";
-  StorageErrorCode2["UNAUTHENTICATED"] = "unauthenticated";
-  StorageErrorCode2["UNAUTHORIZED"] = "unauthorized";
-  StorageErrorCode2["UNAUTHORIZED_APP"] = "unauthorized-app";
-  StorageErrorCode2["RETRY_LIMIT_EXCEEDED"] = "retry-limit-exceeded";
-  StorageErrorCode2["INVALID_CHECKSUM"] = "invalid-checksum";
-  StorageErrorCode2["CANCELED"] = "canceled";
-  StorageErrorCode2["INVALID_EVENT_NAME"] = "invalid-event-name";
-  StorageErrorCode2["INVALID_URL"] = "invalid-url";
-  StorageErrorCode2["INVALID_DEFAULT_BUCKET"] = "invalid-default-bucket";
-  StorageErrorCode2["NO_DEFAULT_BUCKET"] = "no-default-bucket";
-  StorageErrorCode2["CANNOT_SLICE_BLOB"] = "cannot-slice-blob";
-  StorageErrorCode2["SERVER_FILE_WRONG_SIZE"] = "server-file-wrong-size";
-  StorageErrorCode2["NO_DOWNLOAD_URL"] = "no-download-url";
-  StorageErrorCode2["INVALID_ARGUMENT"] = "invalid-argument";
-  StorageErrorCode2["INVALID_ARGUMENT_COUNT"] = "invalid-argument-count";
-  StorageErrorCode2["APP_DELETED"] = "app-deleted";
-  StorageErrorCode2["INVALID_ROOT_OPERATION"] = "invalid-root-operation";
-  StorageErrorCode2["INVALID_FORMAT"] = "invalid-format";
-  StorageErrorCode2["INTERNAL_ERROR"] = "internal-error";
-  StorageErrorCode2["UNSUPPORTED_ENVIRONMENT"] = "unsupported-environment";
+(function(StorageErrorCode3) {
+  StorageErrorCode3["UNKNOWN"] = "unknown";
+  StorageErrorCode3["OBJECT_NOT_FOUND"] = "object-not-found";
+  StorageErrorCode3["BUCKET_NOT_FOUND"] = "bucket-not-found";
+  StorageErrorCode3["PROJECT_NOT_FOUND"] = "project-not-found";
+  StorageErrorCode3["QUOTA_EXCEEDED"] = "quota-exceeded";
+  StorageErrorCode3["UNAUTHENTICATED"] = "unauthenticated";
+  StorageErrorCode3["UNAUTHORIZED"] = "unauthorized";
+  StorageErrorCode3["UNAUTHORIZED_APP"] = "unauthorized-app";
+  StorageErrorCode3["RETRY_LIMIT_EXCEEDED"] = "retry-limit-exceeded";
+  StorageErrorCode3["INVALID_CHECKSUM"] = "invalid-checksum";
+  StorageErrorCode3["CANCELED"] = "canceled";
+  StorageErrorCode3["INVALID_EVENT_NAME"] = "invalid-event-name";
+  StorageErrorCode3["INVALID_URL"] = "invalid-url";
+  StorageErrorCode3["INVALID_DEFAULT_BUCKET"] = "invalid-default-bucket";
+  StorageErrorCode3["NO_DEFAULT_BUCKET"] = "no-default-bucket";
+  StorageErrorCode3["CANNOT_SLICE_BLOB"] = "cannot-slice-blob";
+  StorageErrorCode3["SERVER_FILE_WRONG_SIZE"] = "server-file-wrong-size";
+  StorageErrorCode3["NO_DOWNLOAD_URL"] = "no-download-url";
+  StorageErrorCode3["INVALID_ARGUMENT"] = "invalid-argument";
+  StorageErrorCode3["INVALID_ARGUMENT_COUNT"] = "invalid-argument-count";
+  StorageErrorCode3["APP_DELETED"] = "app-deleted";
+  StorageErrorCode3["INVALID_ROOT_OPERATION"] = "invalid-root-operation";
+  StorageErrorCode3["INVALID_FORMAT"] = "invalid-format";
+  StorageErrorCode3["INTERNAL_ERROR"] = "internal-error";
+  StorageErrorCode3["UNSUPPORTED_ENVIRONMENT"] = "unsupported-environment";
 })(StorageErrorCode || (StorageErrorCode = {}));
 function prependCode(code) {
   return "storage/" + code;
@@ -130,22 +141,6 @@ function prependCode(code) {
 function unknown() {
   const message = "An unknown error occurred, please check the error payload for server response.";
   return new StorageError(StorageErrorCode.UNKNOWN, message);
-}
-function objectNotFound(path) {
-  return new StorageError(StorageErrorCode.OBJECT_NOT_FOUND, "Object '" + path + "' does not exist.");
-}
-function quotaExceeded(bucket) {
-  return new StorageError(StorageErrorCode.QUOTA_EXCEEDED, "Quota for bucket '" + bucket + "' exceeded, please view quota on https://firebase.google.com/pricing/.");
-}
-function unauthenticated() {
-  const message = "User is not authenticated, please authenticate using Firebase Authentication and try again.";
-  return new StorageError(StorageErrorCode.UNAUTHENTICATED, message);
-}
-function unauthorizedApp() {
-  return new StorageError(StorageErrorCode.UNAUTHORIZED_APP, "This app does not have permission to access Firebase Storage on this project.");
-}
-function unauthorized(path) {
-  return new StorageError(StorageErrorCode.UNAUTHORIZED, "User does not have permission to access '" + path + "'.");
 }
 function retryLimitExceeded() {
   return new StorageError(StorageErrorCode.RETRY_LIMIT_EXCEEDED, "Max retry time for operation exceeded, please try again.");
@@ -159,32 +154,14 @@ function invalidUrl(url) {
 function invalidDefaultBucket(bucket) {
   return new StorageError(StorageErrorCode.INVALID_DEFAULT_BUCKET, "Invalid default bucket '" + bucket + "'.");
 }
-function noDefaultBucket() {
-  return new StorageError(StorageErrorCode.NO_DEFAULT_BUCKET, "No default bucket found. Did you set the '" + CONFIG_STORAGE_BUCKET_KEY + "' property when initializing the app?");
-}
-function cannotSliceBlob() {
-  return new StorageError(StorageErrorCode.CANNOT_SLICE_BLOB, "Cannot slice blob for upload. Please retry the upload.");
-}
-function serverFileWrongSize() {
-  return new StorageError(StorageErrorCode.SERVER_FILE_WRONG_SIZE, "Server recorded incorrect upload file size, please retry the upload.");
-}
-function noDownloadURL() {
-  return new StorageError(StorageErrorCode.NO_DOWNLOAD_URL, "The given file does not have any download URLs.");
-}
 function invalidArgument(message) {
   return new StorageError(StorageErrorCode.INVALID_ARGUMENT, message);
 }
 function appDeleted() {
   return new StorageError(StorageErrorCode.APP_DELETED, "The Firebase app was deleted.");
 }
-function invalidRootOperation(name2) {
-  return new StorageError(StorageErrorCode.INVALID_ROOT_OPERATION, "The operation '" + name2 + "' cannot be performed on a root reference, create a non-root reference using child, such as .child('file.png').");
-}
-function invalidFormat(format, message) {
-  return new StorageError(StorageErrorCode.INVALID_FORMAT, "String does not match format '" + format + "': " + message);
-}
-function internalError(message) {
-  throw new StorageError(StorageErrorCode.INTERNAL_ERROR, "Internal error: " + message);
+function invalidRootOperation(name3) {
+  return new StorageError(StorageErrorCode.INVALID_ROOT_OPERATION, "The operation '" + name3 + "' cannot be performed on a root reference, create a non-root reference using child, such as .child('file.png').");
 }
 var Location = class _Location {
   constructor(bucket, path) {
@@ -235,10 +212,10 @@ var Location = class _Location {
     function httpModify(loc) {
       loc.path_ = decodeURIComponent(loc.path);
     }
-    const version2 = "v[A-Za-z0-9_]+";
+    const version3 = "v[A-Za-z0-9_]+";
     const firebaseStorageHost = host.replace(/[.]/g, "\\.");
     const firebaseStoragePath = "(/([^?#]*).*)?$";
-    const firebaseStorageRegExp = new RegExp(`^https?://${firebaseStorageHost}/${version2}/b/${bucketDomain}/o${firebaseStoragePath}`, "i");
+    const firebaseStorageRegExp = new RegExp(`^https?://${firebaseStorageHost}/${version3}/b/${bucketDomain}/o${firebaseStoragePath}`, "i");
     const firebaseStorageIndices = {
       bucket: 1,
       path: 3
@@ -301,7 +278,7 @@ function start(doRequest, backoffCompleteCb, timeout) {
   let globalTimeoutId = null;
   let hitTimeout = false;
   let cancelState = 0;
-  function canceled2() {
+  function canceled3() {
     return cancelState === 2;
   }
   let triggeredCallback = false;
@@ -314,7 +291,7 @@ function start(doRequest, backoffCompleteCb, timeout) {
   function callWithDelay(millis) {
     retryTimeoutId = setTimeout(() => {
       retryTimeoutId = null;
-      doRequest(responseHandler, canceled2());
+      doRequest(responseHandler, canceled3());
     }, millis);
   }
   function clearGlobalTimeout() {
@@ -332,7 +309,7 @@ function start(doRequest, backoffCompleteCb, timeout) {
       triggerCallback.call(null, success, ...args);
       return;
     }
-    const mustStop = canceled2() || hitTimeout;
+    const mustStop = canceled3() || hitTimeout;
     if (mustStop) {
       clearGlobalTimeout();
       triggerCallback.call(null, success, ...args);
@@ -351,7 +328,7 @@ function start(doRequest, backoffCompleteCb, timeout) {
     callWithDelay(waitMillis);
   }
   let stopped = false;
-  function stop2(wasTimeout) {
+  function stop3(wasTimeout) {
     if (stopped) {
       return;
     }
@@ -375,30 +352,15 @@ function start(doRequest, backoffCompleteCb, timeout) {
   callWithDelay(0);
   globalTimeoutId = setTimeout(() => {
     hitTimeout = true;
-    stop2(true);
+    stop3(true);
   }, timeout);
-  return stop2;
+  return stop3;
 }
 function stop(id) {
   id(false);
 }
 function isJustDef(p) {
   return p !== void 0;
-}
-function isFunction(p) {
-  return typeof p === "function";
-}
-function isNonArrayObject(p) {
-  return typeof p === "object" && !Array.isArray(p);
-}
-function isString(p) {
-  return typeof p === "string" || p instanceof String;
-}
-function isNativeBlob(p) {
-  return isNativeBlobDefined() && p instanceof Blob;
-}
-function isNativeBlobDefined() {
-  return typeof Blob !== "undefined";
 }
 function validateNumber(argument, minValue, maxValue, value) {
   if (value < minValue) {
@@ -407,13 +369,6 @@ function validateNumber(argument, minValue, maxValue, value) {
   if (value > maxValue) {
     throw invalidArgument(`Invalid value for '${argument}'. Expected ${maxValue} or less.`);
   }
-}
-function makeUrl(urlPart, host, protocol) {
-  let origin = host;
-  if (protocol == null) {
-    origin = `https://${host}`;
-  }
-  return `${protocol}://${origin}/v0${urlPart}`;
 }
 function makeQueryString(params) {
   const encode = encodeURIComponent;
@@ -428,10 +383,10 @@ function makeQueryString(params) {
   return queryPart;
 }
 var ErrorCode;
-(function(ErrorCode2) {
-  ErrorCode2[ErrorCode2["NO_ERROR"] = 0] = "NO_ERROR";
-  ErrorCode2[ErrorCode2["NETWORK_ERROR"] = 1] = "NETWORK_ERROR";
-  ErrorCode2[ErrorCode2["ABORT"] = 2] = "ABORT";
+(function(ErrorCode3) {
+  ErrorCode3[ErrorCode3["NO_ERROR"] = 0] = "NO_ERROR";
+  ErrorCode3[ErrorCode3["NETWORK_ERROR"] = 1] = "NETWORK_ERROR";
+  ErrorCode3[ErrorCode3["ABORT"] = 2] = "ABORT";
 })(ErrorCode || (ErrorCode = {}));
 function isRetryStatusCode(status, additionalRetryCodes) {
   const isFiveHundredCode = status >= 500 && status < 600;
@@ -473,8 +428,8 @@ var NetworkRequest = class {
    * Actually starts the retry loop.
    */
   start_() {
-    const doTheRequest = (backoffCallback, canceled2) => {
-      if (canceled2) {
+    const doTheRequest = (backoffCallback, canceled3) => {
+      if (canceled3) {
         backoffCallback(false, new RequestEndStatus(false, null, true));
         return;
       }
@@ -564,10 +519,10 @@ var NetworkRequest = class {
   }
 };
 var RequestEndStatus = class {
-  constructor(wasSuccessCode, connection, canceled2) {
+  constructor(wasSuccessCode, connection, canceled3) {
     this.wasSuccessCode = wasSuccessCode;
     this.connection = connection;
-    this.canceled = !!canceled2;
+    this.canceled = !!canceled3;
   }
 };
 function addAuthHeader_(headers, authToken) {
@@ -598,6 +553,872 @@ function makeRequest(requestInfo, appId, authToken, appCheckToken, requestFactor
   addAppCheckHeader_(headers, appCheckToken);
   return new NetworkRequest(url, requestInfo.method, headers, requestInfo.body, requestInfo.successCodes, requestInfo.additionalRetryCodes, requestInfo.handler, requestInfo.errorHandler, requestInfo.timeout, requestInfo.progressCallback, requestFactory, retry);
 }
+function parent(path) {
+  if (path.length === 0) {
+    return null;
+  }
+  const index = path.lastIndexOf("/");
+  if (index === -1) {
+    return "";
+  }
+  const newPath = path.slice(0, index);
+  return newPath;
+}
+function lastComponent(path) {
+  const index = path.lastIndexOf("/", path.length - 2);
+  if (index === -1) {
+    return path;
+  } else {
+    return path.slice(index + 1);
+  }
+}
+var RESUMABLE_UPLOAD_CHUNK_SIZE = 256 * 1024;
+var Reference = class _Reference {
+  constructor(_service, location) {
+    this._service = _service;
+    if (location instanceof Location) {
+      this._location = location;
+    } else {
+      this._location = Location.makeFromUrl(location, _service.host);
+    }
+  }
+  /**
+   * Returns the URL for the bucket and path this object references,
+   *     in the form gs://<bucket>/<object-path>
+   * @override
+   */
+  toString() {
+    return "gs://" + this._location.bucket + "/" + this._location.path;
+  }
+  _newRef(service, location) {
+    return new _Reference(service, location);
+  }
+  /**
+   * A reference to the root of this object's bucket.
+   */
+  get root() {
+    const location = new Location(this._location.bucket, "");
+    return this._newRef(this._service, location);
+  }
+  /**
+   * The name of the bucket containing this reference's object.
+   */
+  get bucket() {
+    return this._location.bucket;
+  }
+  /**
+   * The full path of this object.
+   */
+  get fullPath() {
+    return this._location.path;
+  }
+  /**
+   * The short name of this object, which is the last component of the full path.
+   * For example, if fullPath is 'full/path/image.png', name is 'image.png'.
+   */
+  get name() {
+    return lastComponent(this._location.path);
+  }
+  /**
+   * The `StorageService` instance this `StorageReference` is associated with.
+   */
+  get storage() {
+    return this._service;
+  }
+  /**
+   * A `StorageReference` pointing to the parent location of this `StorageReference`, or null if
+   * this reference is the root.
+   */
+  get parent() {
+    const newPath = parent(this._location.path);
+    if (newPath === null) {
+      return null;
+    }
+    const location = new Location(this._location.bucket, newPath);
+    return new _Reference(this._service, location);
+  }
+  /**
+   * Utility function to throw an error in methods that do not accept a root reference.
+   */
+  _throwIfRoot(name3) {
+    if (this._location.path === "") {
+      throw invalidRootOperation(name3);
+    }
+  }
+};
+function extractBucket(host, config) {
+  const bucketString = config === null || config === void 0 ? void 0 : config[CONFIG_STORAGE_BUCKET_KEY];
+  if (bucketString == null) {
+    return null;
+  }
+  return Location.makeFromBucketSpec(bucketString, host);
+}
+var FirebaseStorageImpl = class {
+  constructor(app, _authProvider, _appCheckProvider, _url, _firebaseVersion) {
+    this.app = app;
+    this._authProvider = _authProvider;
+    this._appCheckProvider = _appCheckProvider;
+    this._url = _url;
+    this._firebaseVersion = _firebaseVersion;
+    this._bucket = null;
+    this._host = DEFAULT_HOST;
+    this._protocol = "https";
+    this._appId = null;
+    this._deleted = false;
+    this._maxOperationRetryTime = DEFAULT_MAX_OPERATION_RETRY_TIME;
+    this._maxUploadRetryTime = DEFAULT_MAX_UPLOAD_RETRY_TIME;
+    this._requests = /* @__PURE__ */ new Set();
+    if (_url != null) {
+      this._bucket = Location.makeFromBucketSpec(_url, this._host);
+    } else {
+      this._bucket = extractBucket(this._host, this.app.options);
+    }
+  }
+  /**
+   * The host string for this service, in the form of `host` or
+   * `host:port`.
+   */
+  get host() {
+    return this._host;
+  }
+  set host(host) {
+    this._host = host;
+    if (this._url != null) {
+      this._bucket = Location.makeFromBucketSpec(this._url, host);
+    } else {
+      this._bucket = extractBucket(host, this.app.options);
+    }
+  }
+  /**
+   * The maximum time to retry uploads in milliseconds.
+   */
+  get maxUploadRetryTime() {
+    return this._maxUploadRetryTime;
+  }
+  set maxUploadRetryTime(time) {
+    validateNumber(
+      "time",
+      /* minValue=*/
+      0,
+      /* maxValue= */
+      Number.POSITIVE_INFINITY,
+      time
+    );
+    this._maxUploadRetryTime = time;
+  }
+  /**
+   * The maximum time to retry operations other than uploads or downloads in
+   * milliseconds.
+   */
+  get maxOperationRetryTime() {
+    return this._maxOperationRetryTime;
+  }
+  set maxOperationRetryTime(time) {
+    validateNumber(
+      "time",
+      /* minValue=*/
+      0,
+      /* maxValue= */
+      Number.POSITIVE_INFINITY,
+      time
+    );
+    this._maxOperationRetryTime = time;
+  }
+  _getAuthToken() {
+    return __async(this, null, function* () {
+      if (this._overrideAuthToken) {
+        return this._overrideAuthToken;
+      }
+      const auth = this._authProvider.getImmediate({
+        optional: true
+      });
+      if (auth) {
+        const tokenData = yield auth.getToken();
+        if (tokenData !== null) {
+          return tokenData.accessToken;
+        }
+      }
+      return null;
+    });
+  }
+  _getAppCheckToken() {
+    return __async(this, null, function* () {
+      const appCheck = this._appCheckProvider.getImmediate({
+        optional: true
+      });
+      if (appCheck) {
+        const result = yield appCheck.getToken();
+        return result.token;
+      }
+      return null;
+    });
+  }
+  /**
+   * Stop running requests and prevent more from being created.
+   */
+  _delete() {
+    if (!this._deleted) {
+      this._deleted = true;
+      this._requests.forEach((request) => request.cancel());
+      this._requests.clear();
+    }
+    return Promise.resolve();
+  }
+  /**
+   * Returns a new firebaseStorage.Reference object referencing this StorageService
+   * at the given Location.
+   */
+  _makeStorageReference(loc) {
+    return new Reference(this, loc);
+  }
+  /**
+   * @param requestInfo - HTTP RequestInfo object
+   * @param authToken - Firebase auth token
+   */
+  _makeRequest(requestInfo, requestFactory, authToken, appCheckToken, retry = true) {
+    if (!this._deleted) {
+      const request = makeRequest(requestInfo, this._appId, authToken, appCheckToken, requestFactory, this._firebaseVersion, retry);
+      this._requests.add(request);
+      request.getPromise().then(() => this._requests.delete(request), () => this._requests.delete(request));
+      return request;
+    } else {
+      return new FailRequest(appDeleted());
+    }
+  }
+  makeRequestWithTokens(requestInfo, requestFactory) {
+    return __async(this, null, function* () {
+      const [authToken, appCheckToken] = yield Promise.all([this._getAuthToken(), this._getAppCheckToken()]);
+      return this._makeRequest(requestInfo, requestFactory, authToken, appCheckToken).getPromise();
+    });
+  }
+};
+var name = "@firebase/storage";
+var version = "0.13.4";
+var STORAGE_TYPE = "storage";
+function factory(container, {
+  instanceIdentifier: url
+}) {
+  const app = container.getProvider("app").getImmediate();
+  const authProvider = container.getProvider("auth-internal");
+  const appCheckProvider = container.getProvider("app-check-internal");
+  return new FirebaseStorageImpl(app, authProvider, appCheckProvider, url, SDK_VERSION2);
+}
+function registerStorage() {
+  _registerComponent2(new Component2(
+    STORAGE_TYPE,
+    factory,
+    "PUBLIC"
+    /* ComponentType.PUBLIC */
+  ).setMultipleInstances(true));
+  registerVersion2(name, version);
+}
+registerStorage();
+
+// node_modules/rxfire/storage/index.esm.js
+var import_rxjs = __toESM(require_cjs());
+var import_operators = __toESM(require_operators());
+function fromTask(task) {
+  return new import_rxjs.Observable(function(subscriber) {
+    var lastSnapshot = null;
+    var complete = false;
+    var hasError = false;
+    var error = null;
+    var emit = function(snapshot) {
+      lastSnapshot = snapshot;
+      schedule();
+    };
+    var id = null;
+    var schedule = function() {
+      if (!id) {
+        id = setTimeout(function() {
+          id = null;
+          if (lastSnapshot) subscriber.next(lastSnapshot);
+          if (complete) subscriber.complete();
+          if (hasError) subscriber.error(error);
+        });
+      }
+    };
+    subscriber.add(function() {
+      if (id) clearTimeout(id);
+    });
+    emit(task.snapshot);
+    subscriber.add(task.on("state_changed", emit));
+    subscriber.add((0, import_rxjs.from)(task).subscribe({
+      next: emit,
+      error: function(err) {
+        hasError = true;
+        error = err;
+        schedule();
+      },
+      complete: function() {
+        complete = true;
+        schedule();
+      }
+    }));
+  });
+}
+function percentage(task) {
+  return fromTask(task).pipe((0, import_operators.map)(function(snapshot) {
+    return {
+      progress: snapshot.bytesTransferred / snapshot.totalBytes * 100,
+      snapshot
+    };
+  }));
+}
+
+// node_modules/@angular/fire/node_modules/@firebase/storage/dist/node-esm/index.node.esm.js
+var import_undici = __toESM(require_undici());
+var DEFAULT_HOST2 = "firebasestorage.googleapis.com";
+var CONFIG_STORAGE_BUCKET_KEY2 = "storageBucket";
+var DEFAULT_MAX_OPERATION_RETRY_TIME2 = 2 * 60 * 1e3;
+var DEFAULT_MAX_UPLOAD_RETRY_TIME2 = 10 * 60 * 1e3;
+var DEFAULT_MIN_SLEEP_TIME_MILLIS = 1e3;
+var StorageError2 = class _StorageError extends FirebaseError {
+  /**
+   * @param code - A `StorageErrorCode` string to be prefixed with 'storage/' and
+   *  added to the end of the message.
+   * @param message  - Error message.
+   * @param status_ - Corresponding HTTP Status Code
+   */
+  constructor(code, message, status_ = 0) {
+    super(prependCode2(code), `Firebase Storage: ${message} (${prependCode2(code)})`);
+    this.status_ = status_;
+    this.customData = {
+      serverResponse: null
+    };
+    this._baseMessage = this.message;
+    Object.setPrototypeOf(this, _StorageError.prototype);
+  }
+  get status() {
+    return this.status_;
+  }
+  set status(status) {
+    this.status_ = status;
+  }
+  /**
+   * Compares a `StorageErrorCode` against this error's code, filtering out the prefix.
+   */
+  _codeEquals(code) {
+    return prependCode2(code) === this.code;
+  }
+  /**
+   * Optional response message that was added by the server.
+   */
+  get serverResponse() {
+    return this.customData.serverResponse;
+  }
+  set serverResponse(serverResponse) {
+    this.customData.serverResponse = serverResponse;
+    if (this.customData.serverResponse) {
+      this.message = `${this._baseMessage}
+${this.customData.serverResponse}`;
+    } else {
+      this.message = this._baseMessage;
+    }
+  }
+};
+var StorageErrorCode2;
+(function(StorageErrorCode3) {
+  StorageErrorCode3["UNKNOWN"] = "unknown";
+  StorageErrorCode3["OBJECT_NOT_FOUND"] = "object-not-found";
+  StorageErrorCode3["BUCKET_NOT_FOUND"] = "bucket-not-found";
+  StorageErrorCode3["PROJECT_NOT_FOUND"] = "project-not-found";
+  StorageErrorCode3["QUOTA_EXCEEDED"] = "quota-exceeded";
+  StorageErrorCode3["UNAUTHENTICATED"] = "unauthenticated";
+  StorageErrorCode3["UNAUTHORIZED"] = "unauthorized";
+  StorageErrorCode3["UNAUTHORIZED_APP"] = "unauthorized-app";
+  StorageErrorCode3["RETRY_LIMIT_EXCEEDED"] = "retry-limit-exceeded";
+  StorageErrorCode3["INVALID_CHECKSUM"] = "invalid-checksum";
+  StorageErrorCode3["CANCELED"] = "canceled";
+  StorageErrorCode3["INVALID_EVENT_NAME"] = "invalid-event-name";
+  StorageErrorCode3["INVALID_URL"] = "invalid-url";
+  StorageErrorCode3["INVALID_DEFAULT_BUCKET"] = "invalid-default-bucket";
+  StorageErrorCode3["NO_DEFAULT_BUCKET"] = "no-default-bucket";
+  StorageErrorCode3["CANNOT_SLICE_BLOB"] = "cannot-slice-blob";
+  StorageErrorCode3["SERVER_FILE_WRONG_SIZE"] = "server-file-wrong-size";
+  StorageErrorCode3["NO_DOWNLOAD_URL"] = "no-download-url";
+  StorageErrorCode3["INVALID_ARGUMENT"] = "invalid-argument";
+  StorageErrorCode3["INVALID_ARGUMENT_COUNT"] = "invalid-argument-count";
+  StorageErrorCode3["APP_DELETED"] = "app-deleted";
+  StorageErrorCode3["INVALID_ROOT_OPERATION"] = "invalid-root-operation";
+  StorageErrorCode3["INVALID_FORMAT"] = "invalid-format";
+  StorageErrorCode3["INTERNAL_ERROR"] = "internal-error";
+  StorageErrorCode3["UNSUPPORTED_ENVIRONMENT"] = "unsupported-environment";
+})(StorageErrorCode2 || (StorageErrorCode2 = {}));
+function prependCode2(code) {
+  return "storage/" + code;
+}
+function unknown2() {
+  const message = "An unknown error occurred, please check the error payload for server response.";
+  return new StorageError2(StorageErrorCode2.UNKNOWN, message);
+}
+function objectNotFound(path) {
+  return new StorageError2(StorageErrorCode2.OBJECT_NOT_FOUND, "Object '" + path + "' does not exist.");
+}
+function quotaExceeded(bucket) {
+  return new StorageError2(StorageErrorCode2.QUOTA_EXCEEDED, "Quota for bucket '" + bucket + "' exceeded, please view quota on https://firebase.google.com/pricing/.");
+}
+function unauthenticated() {
+  const message = "User is not authenticated, please authenticate using Firebase Authentication and try again.";
+  return new StorageError2(StorageErrorCode2.UNAUTHENTICATED, message);
+}
+function unauthorizedApp() {
+  return new StorageError2(StorageErrorCode2.UNAUTHORIZED_APP, "This app does not have permission to access Firebase Storage on this project.");
+}
+function unauthorized(path) {
+  return new StorageError2(StorageErrorCode2.UNAUTHORIZED, "User does not have permission to access '" + path + "'.");
+}
+function retryLimitExceeded2() {
+  return new StorageError2(StorageErrorCode2.RETRY_LIMIT_EXCEEDED, "Max retry time for operation exceeded, please try again.");
+}
+function canceled2() {
+  return new StorageError2(StorageErrorCode2.CANCELED, "User canceled the upload/download.");
+}
+function invalidUrl2(url) {
+  return new StorageError2(StorageErrorCode2.INVALID_URL, "Invalid URL '" + url + "'.");
+}
+function invalidDefaultBucket2(bucket) {
+  return new StorageError2(StorageErrorCode2.INVALID_DEFAULT_BUCKET, "Invalid default bucket '" + bucket + "'.");
+}
+function noDefaultBucket() {
+  return new StorageError2(StorageErrorCode2.NO_DEFAULT_BUCKET, "No default bucket found. Did you set the '" + CONFIG_STORAGE_BUCKET_KEY2 + "' property when initializing the app?");
+}
+function cannotSliceBlob() {
+  return new StorageError2(StorageErrorCode2.CANNOT_SLICE_BLOB, "Cannot slice blob for upload. Please retry the upload.");
+}
+function serverFileWrongSize() {
+  return new StorageError2(StorageErrorCode2.SERVER_FILE_WRONG_SIZE, "Server recorded incorrect upload file size, please retry the upload.");
+}
+function noDownloadURL() {
+  return new StorageError2(StorageErrorCode2.NO_DOWNLOAD_URL, "The given file does not have any download URLs.");
+}
+function invalidArgument2(message) {
+  return new StorageError2(StorageErrorCode2.INVALID_ARGUMENT, message);
+}
+function appDeleted2() {
+  return new StorageError2(StorageErrorCode2.APP_DELETED, "The Firebase app was deleted.");
+}
+function invalidRootOperation2(name3) {
+  return new StorageError2(StorageErrorCode2.INVALID_ROOT_OPERATION, "The operation '" + name3 + "' cannot be performed on a root reference, create a non-root reference using child, such as .child('file.png').");
+}
+function invalidFormat(format, message) {
+  return new StorageError2(StorageErrorCode2.INVALID_FORMAT, "String does not match format '" + format + "': " + message);
+}
+function internalError(message) {
+  throw new StorageError2(StorageErrorCode2.INTERNAL_ERROR, "Internal error: " + message);
+}
+var Location2 = class _Location {
+  constructor(bucket, path) {
+    this.bucket = bucket;
+    this.path_ = path;
+  }
+  get path() {
+    return this.path_;
+  }
+  get isRoot() {
+    return this.path.length === 0;
+  }
+  fullServerUrl() {
+    const encode = encodeURIComponent;
+    return "/b/" + encode(this.bucket) + "/o/" + encode(this.path);
+  }
+  bucketOnlyServerUrl() {
+    const encode = encodeURIComponent;
+    return "/b/" + encode(this.bucket) + "/o";
+  }
+  static makeFromBucketSpec(bucketString, host) {
+    let bucketLocation;
+    try {
+      bucketLocation = _Location.makeFromUrl(bucketString, host);
+    } catch (e) {
+      return new _Location(bucketString, "");
+    }
+    if (bucketLocation.path === "") {
+      return bucketLocation;
+    } else {
+      throw invalidDefaultBucket2(bucketString);
+    }
+  }
+  static makeFromUrl(url, host) {
+    let location = null;
+    const bucketDomain = "([A-Za-z0-9.\\-_]+)";
+    function gsModify(loc) {
+      if (loc.path.charAt(loc.path.length - 1) === "/") {
+        loc.path_ = loc.path_.slice(0, -1);
+      }
+    }
+    const gsPath = "(/(.*))?$";
+    const gsRegex = new RegExp("^gs://" + bucketDomain + gsPath, "i");
+    const gsIndices = {
+      bucket: 1,
+      path: 3
+    };
+    function httpModify(loc) {
+      loc.path_ = decodeURIComponent(loc.path);
+    }
+    const version3 = "v[A-Za-z0-9_]+";
+    const firebaseStorageHost = host.replace(/[.]/g, "\\.");
+    const firebaseStoragePath = "(/([^?#]*).*)?$";
+    const firebaseStorageRegExp = new RegExp(`^https?://${firebaseStorageHost}/${version3}/b/${bucketDomain}/o${firebaseStoragePath}`, "i");
+    const firebaseStorageIndices = {
+      bucket: 1,
+      path: 3
+    };
+    const cloudStorageHost = host === DEFAULT_HOST2 ? "(?:storage.googleapis.com|storage.cloud.google.com)" : host;
+    const cloudStoragePath = "([^?#]*)";
+    const cloudStorageRegExp = new RegExp(`^https?://${cloudStorageHost}/${bucketDomain}/${cloudStoragePath}`, "i");
+    const cloudStorageIndices = {
+      bucket: 1,
+      path: 2
+    };
+    const groups = [{
+      regex: gsRegex,
+      indices: gsIndices,
+      postModify: gsModify
+    }, {
+      regex: firebaseStorageRegExp,
+      indices: firebaseStorageIndices,
+      postModify: httpModify
+    }, {
+      regex: cloudStorageRegExp,
+      indices: cloudStorageIndices,
+      postModify: httpModify
+    }];
+    for (let i = 0; i < groups.length; i++) {
+      const group = groups[i];
+      const captures = group.regex.exec(url);
+      if (captures) {
+        const bucketValue = captures[group.indices.bucket];
+        let pathValue = captures[group.indices.path];
+        if (!pathValue) {
+          pathValue = "";
+        }
+        location = new _Location(bucketValue, pathValue);
+        group.postModify(location);
+        break;
+      }
+    }
+    if (location == null) {
+      throw invalidUrl2(url);
+    }
+    return location;
+  }
+};
+var FailRequest2 = class {
+  constructor(error) {
+    this.promise_ = Promise.reject(error);
+  }
+  /** @inheritDoc */
+  getPromise() {
+    return this.promise_;
+  }
+  /** @inheritDoc */
+  cancel(_appDelete = false) {
+  }
+};
+function start2(doRequest, backoffCompleteCb, timeout) {
+  let waitSeconds = 1;
+  let retryTimeoutId = null;
+  let globalTimeoutId = null;
+  let hitTimeout = false;
+  let cancelState = 0;
+  function canceled3() {
+    return cancelState === 2;
+  }
+  let triggeredCallback = false;
+  function triggerCallback(...args) {
+    if (!triggeredCallback) {
+      triggeredCallback = true;
+      backoffCompleteCb.apply(null, args);
+    }
+  }
+  function callWithDelay(millis) {
+    retryTimeoutId = setTimeout(() => {
+      retryTimeoutId = null;
+      doRequest(responseHandler, canceled3());
+    }, millis);
+  }
+  function clearGlobalTimeout() {
+    if (globalTimeoutId) {
+      clearTimeout(globalTimeoutId);
+    }
+  }
+  function responseHandler(success, ...args) {
+    if (triggeredCallback) {
+      clearGlobalTimeout();
+      return;
+    }
+    if (success) {
+      clearGlobalTimeout();
+      triggerCallback.call(null, success, ...args);
+      return;
+    }
+    const mustStop = canceled3() || hitTimeout;
+    if (mustStop) {
+      clearGlobalTimeout();
+      triggerCallback.call(null, success, ...args);
+      return;
+    }
+    if (waitSeconds < 64) {
+      waitSeconds *= 2;
+    }
+    let waitMillis;
+    if (cancelState === 1) {
+      cancelState = 2;
+      waitMillis = 0;
+    } else {
+      waitMillis = (waitSeconds + Math.random()) * 1e3;
+    }
+    callWithDelay(waitMillis);
+  }
+  let stopped = false;
+  function stop3(wasTimeout) {
+    if (stopped) {
+      return;
+    }
+    stopped = true;
+    clearGlobalTimeout();
+    if (triggeredCallback) {
+      return;
+    }
+    if (retryTimeoutId !== null) {
+      if (!wasTimeout) {
+        cancelState = 2;
+      }
+      clearTimeout(retryTimeoutId);
+      callWithDelay(0);
+    } else {
+      if (!wasTimeout) {
+        cancelState = 1;
+      }
+    }
+  }
+  callWithDelay(0);
+  globalTimeoutId = setTimeout(() => {
+    hitTimeout = true;
+    stop3(true);
+  }, timeout);
+  return stop3;
+}
+function stop2(id) {
+  id(false);
+}
+function isJustDef2(p) {
+  return p !== void 0;
+}
+function isFunction(p) {
+  return typeof p === "function";
+}
+function isNonArrayObject(p) {
+  return typeof p === "object" && !Array.isArray(p);
+}
+function isString(p) {
+  return typeof p === "string" || p instanceof String;
+}
+function isNativeBlob(p) {
+  return isNativeBlobDefined() && p instanceof Blob;
+}
+function isNativeBlobDefined() {
+  return typeof Blob !== "undefined";
+}
+function validateNumber2(argument, minValue, maxValue, value) {
+  if (value < minValue) {
+    throw invalidArgument2(`Invalid value for '${argument}'. Expected ${minValue} or greater.`);
+  }
+  if (value > maxValue) {
+    throw invalidArgument2(`Invalid value for '${argument}'. Expected ${maxValue} or less.`);
+  }
+}
+function makeUrl(urlPart, host, protocol) {
+  let origin = host;
+  if (protocol == null) {
+    origin = `https://${host}`;
+  }
+  return `${protocol}://${origin}/v0${urlPart}`;
+}
+function makeQueryString2(params) {
+  const encode = encodeURIComponent;
+  let queryPart = "?";
+  for (const key in params) {
+    if (params.hasOwnProperty(key)) {
+      const nextPart = encode(key) + "=" + encode(params[key]);
+      queryPart = queryPart + nextPart + "&";
+    }
+  }
+  queryPart = queryPart.slice(0, -1);
+  return queryPart;
+}
+var ErrorCode2;
+(function(ErrorCode3) {
+  ErrorCode3[ErrorCode3["NO_ERROR"] = 0] = "NO_ERROR";
+  ErrorCode3[ErrorCode3["NETWORK_ERROR"] = 1] = "NETWORK_ERROR";
+  ErrorCode3[ErrorCode3["ABORT"] = 2] = "ABORT";
+})(ErrorCode2 || (ErrorCode2 = {}));
+function isRetryStatusCode2(status, additionalRetryCodes) {
+  const isFiveHundredCode = status >= 500 && status < 600;
+  const extraRetryCodes = [
+    // Request Timeout: web server didn't receive full request in time.
+    408,
+    // Too Many Requests: you're getting rate-limited, basically.
+    429
+  ];
+  const isExtraRetryCode = extraRetryCodes.indexOf(status) !== -1;
+  const isAdditionalRetryCode = additionalRetryCodes.indexOf(status) !== -1;
+  return isFiveHundredCode || isExtraRetryCode || isAdditionalRetryCode;
+}
+var NetworkRequest2 = class {
+  constructor(url_, method_, headers_, body_, successCodes_, additionalRetryCodes_, callback_, errorCallback_, timeout_, progressCallback_, connectionFactory_, retry = true) {
+    this.url_ = url_;
+    this.method_ = method_;
+    this.headers_ = headers_;
+    this.body_ = body_;
+    this.successCodes_ = successCodes_;
+    this.additionalRetryCodes_ = additionalRetryCodes_;
+    this.callback_ = callback_;
+    this.errorCallback_ = errorCallback_;
+    this.timeout_ = timeout_;
+    this.progressCallback_ = progressCallback_;
+    this.connectionFactory_ = connectionFactory_;
+    this.retry = retry;
+    this.pendingConnection_ = null;
+    this.backoffId_ = null;
+    this.canceled_ = false;
+    this.appDelete_ = false;
+    this.promise_ = new Promise((resolve, reject) => {
+      this.resolve_ = resolve;
+      this.reject_ = reject;
+      this.start_();
+    });
+  }
+  /**
+   * Actually starts the retry loop.
+   */
+  start_() {
+    const doTheRequest = (backoffCallback, canceled3) => {
+      if (canceled3) {
+        backoffCallback(false, new RequestEndStatus2(false, null, true));
+        return;
+      }
+      const connection = this.connectionFactory_();
+      this.pendingConnection_ = connection;
+      const progressListener = (progressEvent) => {
+        const loaded = progressEvent.loaded;
+        const total = progressEvent.lengthComputable ? progressEvent.total : -1;
+        if (this.progressCallback_ !== null) {
+          this.progressCallback_(loaded, total);
+        }
+      };
+      if (this.progressCallback_ !== null) {
+        connection.addUploadProgressListener(progressListener);
+      }
+      connection.send(this.url_, this.method_, this.body_, this.headers_).then(() => {
+        if (this.progressCallback_ !== null) {
+          connection.removeUploadProgressListener(progressListener);
+        }
+        this.pendingConnection_ = null;
+        const hitServer = connection.getErrorCode() === ErrorCode2.NO_ERROR;
+        const status = connection.getStatus();
+        if (!hitServer || isRetryStatusCode2(status, this.additionalRetryCodes_) && this.retry) {
+          const wasCanceled = connection.getErrorCode() === ErrorCode2.ABORT;
+          backoffCallback(false, new RequestEndStatus2(false, null, wasCanceled));
+          return;
+        }
+        const successCode = this.successCodes_.indexOf(status) !== -1;
+        backoffCallback(true, new RequestEndStatus2(successCode, connection));
+      });
+    };
+    const backoffDone = (requestWentThrough, status) => {
+      const resolve = this.resolve_;
+      const reject = this.reject_;
+      const connection = status.connection;
+      if (status.wasSuccessCode) {
+        try {
+          const result = this.callback_(connection, connection.getResponse());
+          if (isJustDef2(result)) {
+            resolve(result);
+          } else {
+            resolve();
+          }
+        } catch (e) {
+          reject(e);
+        }
+      } else {
+        if (connection !== null) {
+          const err = unknown2();
+          err.serverResponse = connection.getErrorText();
+          if (this.errorCallback_) {
+            reject(this.errorCallback_(connection, err));
+          } else {
+            reject(err);
+          }
+        } else {
+          if (status.canceled) {
+            const err = this.appDelete_ ? appDeleted2() : canceled2();
+            reject(err);
+          } else {
+            const err = retryLimitExceeded2();
+            reject(err);
+          }
+        }
+      }
+    };
+    if (this.canceled_) {
+      backoffDone(false, new RequestEndStatus2(false, null, true));
+    } else {
+      this.backoffId_ = start2(doTheRequest, backoffDone, this.timeout_);
+    }
+  }
+  /** @inheritDoc */
+  getPromise() {
+    return this.promise_;
+  }
+  /** @inheritDoc */
+  cancel(appDelete) {
+    this.canceled_ = true;
+    this.appDelete_ = appDelete || false;
+    if (this.backoffId_ !== null) {
+      stop2(this.backoffId_);
+    }
+    if (this.pendingConnection_ !== null) {
+      this.pendingConnection_.abort();
+    }
+  }
+};
+var RequestEndStatus2 = class {
+  constructor(wasSuccessCode, connection, canceled3) {
+    this.wasSuccessCode = wasSuccessCode;
+    this.connection = connection;
+    this.canceled = !!canceled3;
+  }
+};
+function addAuthHeader_2(headers, authToken) {
+  if (authToken !== null && authToken.length > 0) {
+    headers["Authorization"] = "Firebase " + authToken;
+  }
+}
+function addVersionHeader_2(headers, firebaseVersion) {
+  headers["X-Firebase-Storage-Version"] = "webjs/" + (firebaseVersion !== null && firebaseVersion !== void 0 ? firebaseVersion : "AppManager");
+}
+function addGmpidHeader_2(headers, appId) {
+  if (appId) {
+    headers["X-Firebase-GMPID"] = appId;
+  }
+}
+function addAppCheckHeader_2(headers, appCheckToken) {
+  if (appCheckToken !== null) {
+    headers["X-Firebase-AppCheck"] = appCheckToken;
+  }
+}
+function makeRequest2(requestInfo, appId, authToken, appCheckToken, requestFactory, firebaseVersion, retry = true) {
+  const queryPart = makeQueryString2(requestInfo.urlParams);
+  const url = requestInfo.url + queryPart;
+  const headers = Object.assign({}, requestInfo.headers);
+  addGmpidHeader_2(headers, appId);
+  addAuthHeader_2(headers, authToken);
+  addVersionHeader_2(headers, firebaseVersion);
+  addAppCheckHeader_2(headers, appCheckToken);
+  return new NetworkRequest2(url, requestInfo.method, headers, requestInfo.body, requestInfo.successCodes, requestInfo.additionalRetryCodes, requestInfo.handler, requestInfo.errorHandler, requestInfo.timeout, requestInfo.progressCallback, requestFactory, retry);
+}
 function getBlobBuilder() {
   if (typeof BlobBuilder !== "undefined") {
     return BlobBuilder;
@@ -619,17 +1440,17 @@ function getBlob$1(...args) {
     if (isNativeBlobDefined()) {
       return new Blob(args);
     } else {
-      throw new StorageError(StorageErrorCode.UNSUPPORTED_ENVIRONMENT, "This browser doesn't seem to support creating Blobs");
+      throw new StorageError2(StorageErrorCode2.UNSUPPORTED_ENVIRONMENT, "This browser doesn't seem to support creating Blobs");
     }
   }
 }
-function sliceBlob(blob, start2, end) {
+function sliceBlob(blob, start3, end) {
   if (blob.webkitSlice) {
-    return blob.webkitSlice(start2, end);
+    return blob.webkitSlice(start3, end);
   } else if (blob.mozSlice) {
-    return blob.mozSlice(start2, end);
+    return blob.mozSlice(start3, end);
   } else if (blob.slice) {
-    return blob.slice(start2, end);
+    return blob.slice(start3, end);
   }
   return null;
 }
@@ -689,7 +1510,7 @@ function dataFromString(format, stringData) {
     case StringFormat.DATA_URL:
       return new StringData(dataURLBytes_(stringData), dataURLContentType_(stringData));
   }
-  throw unknown();
+  throw unknown2();
 }
 function utf8Bytes_(value) {
   const b = [];
@@ -900,7 +1721,7 @@ function jsonObjectOrNull(s) {
     return null;
   }
 }
-function parent(path) {
+function parent2(path) {
   if (path.length === 0) {
     return null;
   }
@@ -919,7 +1740,7 @@ function child(path, childPath) {
     return path + "/" + canonicalChildPath;
   }
 }
-function lastComponent(path) {
+function lastComponent2(path) {
   const index = path.lastIndexOf("/", path.length - 2);
   if (index === -1) {
     return path;
@@ -943,7 +1764,7 @@ function xformPath(fullPath) {
   if (!isString(fullPath) || fullPath.length < 2) {
     return fullPath;
   } else {
-    return lastComponent(fullPath);
+    return lastComponent2(fullPath);
   }
 }
 function getMappings() {
@@ -987,7 +1808,7 @@ function addRef(metadata, service) {
   function generateRef() {
     const bucket = metadata["bucket"];
     const path = metadata["fullPath"];
-    const loc = new Location(bucket, path);
+    const loc = new Location2(bucket, path);
     return service._makeStorageReference(loc);
   }
   Object.defineProperty(metadata, "ref", {
@@ -1032,7 +1853,7 @@ function downloadUrlFromResourceString(metadata, resourceString, host, protocol)
     const path = metadata["fullPath"];
     const urlPart = "/b/" + encode(bucket) + "/o/" + encode(path);
     const base = makeUrl(urlPart, host, protocol);
-    const queryString = makeQueryString({
+    const queryString = makeQueryString2({
       alt: "media",
       token
     });
@@ -1062,13 +1883,13 @@ function fromBackendResponse(service, bucket, resource) {
   if (resource[PREFIXES_KEY]) {
     for (const path of resource[PREFIXES_KEY]) {
       const pathWithoutTrailingSlash = path.replace(/\/$/, "");
-      const reference = service._makeStorageReference(new Location(bucket, pathWithoutTrailingSlash));
+      const reference = service._makeStorageReference(new Location2(bucket, pathWithoutTrailingSlash));
       listResult.prefixes.push(reference);
     }
   }
   if (resource[ITEMS_KEY]) {
     for (const item of resource[ITEMS_KEY]) {
-      const reference = service._makeStorageReference(new Location(bucket, item["name"]));
+      const reference = service._makeStorageReference(new Location2(bucket, item["name"]));
       listResult.items.push(reference);
     }
   }
@@ -1099,7 +1920,7 @@ var RequestInfo = class {
 };
 function handlerCheck(cndn) {
   if (!cndn) {
-    throw unknown();
+    throw unknown2();
   }
 }
 function metadataHandler(service, mappings) {
@@ -1382,7 +2203,7 @@ function getResumableUploadStatus(service, location, url, blob) {
   requestInfo.errorHandler = sharedErrorHandler(location);
   return requestInfo;
 }
-var RESUMABLE_UPLOAD_CHUNK_SIZE = 256 * 1024;
+var RESUMABLE_UPLOAD_CHUNK_SIZE2 = 256 * 1024;
 function continueResumableUpload(location, service, url, blob, chunkSize, mappings, status, progressCallback) {
   const status_ = new ResumableUploadStatus(0, 0);
   if (status) {
@@ -1510,7 +2331,7 @@ var FetchConnection = class {
     this.errorText_ = "";
     this.sent_ = false;
     this.fetch_ = import_undici.fetch;
-    this.errorCode_ = ErrorCode.NO_ERROR;
+    this.errorCode_ = ErrorCode2.NO_ERROR;
   }
   send(url, method, body, headers) {
     return __async(this, null, function* () {
@@ -1526,12 +2347,12 @@ var FetchConnection = class {
         });
         this.headers_ = response.headers;
         this.statusCode_ = response.status;
-        this.errorCode_ = ErrorCode.NO_ERROR;
+        this.errorCode_ = ErrorCode2.NO_ERROR;
         this.body_ = yield response.arrayBuffer();
       } catch (e) {
         this.errorText_ = e === null || e === void 0 ? void 0 : e.message;
         this.statusCode_ = 0;
-        this.errorCode_ = ErrorCode.NETWORK_ERROR;
+        this.errorCode_ = ErrorCode2.NETWORK_ERROR;
       }
     });
   }
@@ -1604,12 +2425,12 @@ var FetchStreamConnection = class extends FetchConnection {
         });
         this.headers_ = response.headers;
         this.statusCode_ = response.status;
-        this.errorCode_ = ErrorCode.NO_ERROR;
+        this.errorCode_ = ErrorCode2.NO_ERROR;
         this.stream_ = response.body;
       } catch (e) {
         this.errorText_ = e === null || e === void 0 ? void 0 : e.message;
         this.statusCode_ = 0;
-        this.errorCode_ = ErrorCode.NETWORK_ERROR;
+        this.errorCode_ = ErrorCode2.NETWORK_ERROR;
       }
     });
   }
@@ -1649,14 +2470,14 @@ var UploadTask = class {
     this._errorHandler = (error) => {
       this._request = void 0;
       this._chunkMultiplier = 1;
-      if (error._codeEquals(StorageErrorCode.CANCELED)) {
+      if (error._codeEquals(StorageErrorCode2.CANCELED)) {
         this._needToFetchStatus = true;
         this.completeTransitions_();
       } else {
         const backoffExpired = this.isExponentialBackoffExpired();
-        if (isRetryStatusCode(error.status, [])) {
+        if (isRetryStatusCode2(error.status, [])) {
           if (backoffExpired) {
-            error = retryLimitExceeded();
+            error = retryLimitExceeded2();
           } else {
             this.sleepTime = Math.max(this.sleepTime * 2, DEFAULT_MIN_SLEEP_TIME_MILLIS);
             this._needToFetchStatus = true;
@@ -1673,7 +2494,7 @@ var UploadTask = class {
     };
     this._metadataErrorHandler = (error) => {
       this._request = void 0;
-      if (error._codeEquals(StorageErrorCode.CANCELED)) {
+      if (error._codeEquals(StorageErrorCode2.CANCELED)) {
         this.completeTransitions_();
       } else {
         this._error = error;
@@ -1785,7 +2606,7 @@ var UploadTask = class {
     });
   }
   _continueUpload() {
-    const chunkSize = RESUMABLE_UPLOAD_CHUNK_SIZE * this._chunkMultiplier;
+    const chunkSize = RESUMABLE_UPLOAD_CHUNK_SIZE2 * this._chunkMultiplier;
     const status = new ResumableUploadStatus(this._transferred, this._blob.size());
     const url = this._uploadUrl;
     this._resolveToken((authToken, appCheckToken) => {
@@ -1827,7 +2648,7 @@ var UploadTask = class {
     });
   }
   _increaseMultiplier() {
-    const currentSize = RESUMABLE_UPLOAD_CHUNK_SIZE * this._chunkMultiplier;
+    const currentSize = RESUMABLE_UPLOAD_CHUNK_SIZE2 * this._chunkMultiplier;
     if (currentSize * 2 < 32 * 1024 * 1024) {
       this._chunkMultiplier *= 2;
     }
@@ -1899,7 +2720,7 @@ var UploadTask = class {
         this._notifyObservers();
         break;
       case "canceled":
-        this._error = canceled();
+        this._error = canceled2();
         this._state = state;
         this._notifyObservers();
         break;
@@ -2100,13 +2921,13 @@ var UploadTask = class {
     return valid;
   }
 };
-var Reference = class _Reference {
+var Reference2 = class _Reference {
   constructor(_service, location) {
     this._service = _service;
-    if (location instanceof Location) {
+    if (location instanceof Location2) {
       this._location = location;
     } else {
-      this._location = Location.makeFromUrl(location, _service.host);
+      this._location = Location2.makeFromUrl(location, _service.host);
     }
   }
   /**
@@ -2124,7 +2945,7 @@ var Reference = class _Reference {
    * A reference to the root of this object's bucket.
    */
   get root() {
-    const location = new Location(this._location.bucket, "");
+    const location = new Location2(this._location.bucket, "");
     return this._newRef(this._service, location);
   }
   /**
@@ -2144,7 +2965,7 @@ var Reference = class _Reference {
    * For example, if fullPath is 'full/path/image.png', name is 'image.png'.
    */
   get name() {
-    return lastComponent(this._location.path);
+    return lastComponent2(this._location.path);
   }
   /**
    * The `StorageService` instance this `StorageReference` is associated with.
@@ -2157,19 +2978,19 @@ var Reference = class _Reference {
    * this reference is the root.
    */
   get parent() {
-    const newPath = parent(this._location.path);
+    const newPath = parent2(this._location.path);
     if (newPath === null) {
       return null;
     }
-    const location = new Location(this._location.bucket, newPath);
+    const location = new Location2(this._location.bucket, newPath);
     return new _Reference(this._service, location);
   }
   /**
    * Utility function to throw an error in methods that do not accept a root reference.
    */
-  _throwIfRoot(name2) {
+  _throwIfRoot(name3) {
     if (this._location.path === "") {
-      throw invalidRootOperation(name2);
+      throw invalidRootOperation2(name3);
     }
   }
 };
@@ -2249,7 +3070,7 @@ function listAllHelper(ref3, accumulator, pageToken) {
 function list$1(ref3, options) {
   if (options != null) {
     if (typeof options.maxResults === "number") {
-      validateNumber(
+      validateNumber2(
         "options.maxResults",
         /* minValue= */
         1,
@@ -2297,22 +3118,22 @@ function deleteObject$1(ref3) {
 }
 function _getChild$1(ref3, childPath) {
   const newPath = child(ref3._location.path, childPath);
-  const location = new Location(ref3._location.bucket, newPath);
-  return new Reference(ref3.storage, location);
+  const location = new Location2(ref3._location.bucket, newPath);
+  return new Reference2(ref3.storage, location);
 }
 function isUrl(path) {
   return /^[A-Za-z]+:\/\//.test(path);
 }
 function refFromURL(service, url) {
-  return new Reference(service, url);
+  return new Reference2(service, url);
 }
 function refFromPath(ref3, path) {
-  if (ref3 instanceof FirebaseStorageImpl) {
+  if (ref3 instanceof FirebaseStorageImpl2) {
     const service = ref3;
     if (service._bucket == null) {
       throw noDefaultBucket();
     }
-    const reference = new Reference(service, service._bucket);
+    const reference = new Reference2(service, service._bucket);
     if (path != null) {
       return refFromPath(reference, path);
     } else {
@@ -2328,21 +3149,21 @@ function refFromPath(ref3, path) {
 }
 function ref$1(serviceOrRef, pathOrUrl) {
   if (pathOrUrl && isUrl(pathOrUrl)) {
-    if (serviceOrRef instanceof FirebaseStorageImpl) {
+    if (serviceOrRef instanceof FirebaseStorageImpl2) {
       return refFromURL(serviceOrRef, pathOrUrl);
     } else {
-      throw invalidArgument("To use ref(service, url), the first argument must be a Storage instance.");
+      throw invalidArgument2("To use ref(service, url), the first argument must be a Storage instance.");
     }
   } else {
     return refFromPath(serviceOrRef, pathOrUrl);
   }
 }
-function extractBucket(host, config) {
-  const bucketString = config === null || config === void 0 ? void 0 : config[CONFIG_STORAGE_BUCKET_KEY];
+function extractBucket2(host, config) {
+  const bucketString = config === null || config === void 0 ? void 0 : config[CONFIG_STORAGE_BUCKET_KEY2];
   if (bucketString == null) {
     return null;
   }
-  return Location.makeFromBucketSpec(bucketString, host);
+  return Location2.makeFromBucketSpec(bucketString, host);
 }
 function connectStorageEmulator$1(storage, host, port, options = {}) {
   storage.host = `${host}:${port}`;
@@ -2354,7 +3175,7 @@ function connectStorageEmulator$1(storage, host, port, options = {}) {
     storage._overrideAuthToken = typeof mockUserToken === "string" ? mockUserToken : createMockUserToken(mockUserToken, storage.app.options.projectId);
   }
 }
-var FirebaseStorageImpl = class {
+var FirebaseStorageImpl2 = class {
   constructor(app, _authProvider, _appCheckProvider, _url, _firebaseVersion) {
     this.app = app;
     this._authProvider = _authProvider;
@@ -2362,17 +3183,17 @@ var FirebaseStorageImpl = class {
     this._url = _url;
     this._firebaseVersion = _firebaseVersion;
     this._bucket = null;
-    this._host = DEFAULT_HOST;
+    this._host = DEFAULT_HOST2;
     this._protocol = "https";
     this._appId = null;
     this._deleted = false;
-    this._maxOperationRetryTime = DEFAULT_MAX_OPERATION_RETRY_TIME;
-    this._maxUploadRetryTime = DEFAULT_MAX_UPLOAD_RETRY_TIME;
+    this._maxOperationRetryTime = DEFAULT_MAX_OPERATION_RETRY_TIME2;
+    this._maxUploadRetryTime = DEFAULT_MAX_UPLOAD_RETRY_TIME2;
     this._requests = /* @__PURE__ */ new Set();
     if (_url != null) {
-      this._bucket = Location.makeFromBucketSpec(_url, this._host);
+      this._bucket = Location2.makeFromBucketSpec(_url, this._host);
     } else {
-      this._bucket = extractBucket(this._host, this.app.options);
+      this._bucket = extractBucket2(this._host, this.app.options);
     }
   }
   /**
@@ -2385,9 +3206,9 @@ var FirebaseStorageImpl = class {
   set host(host) {
     this._host = host;
     if (this._url != null) {
-      this._bucket = Location.makeFromBucketSpec(this._url, host);
+      this._bucket = Location2.makeFromBucketSpec(this._url, host);
     } else {
-      this._bucket = extractBucket(host, this.app.options);
+      this._bucket = extractBucket2(host, this.app.options);
     }
   }
   /**
@@ -2397,7 +3218,7 @@ var FirebaseStorageImpl = class {
     return this._maxUploadRetryTime;
   }
   set maxUploadRetryTime(time) {
-    validateNumber(
+    validateNumber2(
       "time",
       /* minValue=*/
       0,
@@ -2415,7 +3236,7 @@ var FirebaseStorageImpl = class {
     return this._maxOperationRetryTime;
   }
   set maxOperationRetryTime(time) {
-    validateNumber(
+    validateNumber2(
       "time",
       /* minValue=*/
       0,
@@ -2470,7 +3291,7 @@ var FirebaseStorageImpl = class {
    * at the given Location.
    */
   _makeStorageReference(loc) {
-    return new Reference(this, loc);
+    return new Reference2(this, loc);
   }
   /**
    * @param requestInfo - HTTP RequestInfo object
@@ -2478,12 +3299,12 @@ var FirebaseStorageImpl = class {
    */
   _makeRequest(requestInfo, requestFactory, authToken, appCheckToken, retry = true) {
     if (!this._deleted) {
-      const request = makeRequest(requestInfo, this._appId, authToken, appCheckToken, requestFactory, this._firebaseVersion, retry);
+      const request = makeRequest2(requestInfo, this._appId, authToken, appCheckToken, requestFactory, this._firebaseVersion, retry);
       this._requests.add(request);
       request.getPromise().then(() => this._requests.delete(request), () => this._requests.delete(request));
       return request;
     } else {
-      return new FailRequest(appDeleted());
+      return new FailRequest2(appDeleted2());
     }
   }
   makeRequestWithTokens(requestInfo, requestFactory) {
@@ -2493,9 +3314,9 @@ var FirebaseStorageImpl = class {
     });
   }
 };
-var name = "@firebase/storage";
-var version = "0.13.2";
-var STORAGE_TYPE = "storage";
+var name2 = "@firebase/storage";
+var version2 = "0.13.2";
+var STORAGE_TYPE2 = "storage";
 function getBytes(ref3, maxDownloadSizeBytes) {
   ref3 = getModularInstance(ref3);
   return getBytesInternal(ref3, maxDownloadSizeBytes);
@@ -2504,15 +3325,15 @@ function uploadBytes(ref3, data, metadata) {
   ref3 = getModularInstance(ref3);
   return uploadBytes$1(ref3, data, metadata);
 }
-function uploadString(ref3, value, format, metadata) {
+function uploadString2(ref3, value, format, metadata) {
   ref3 = getModularInstance(ref3);
   return uploadString$1(ref3, value, format, metadata);
 }
-function uploadBytesResumable(ref3, data, metadata) {
+function uploadBytesResumable2(ref3, data, metadata) {
   ref3 = getModularInstance(ref3);
   return uploadBytesResumable$1(ref3, data, metadata);
 }
-function getMetadata(ref3) {
+function getMetadata2(ref3) {
   ref3 = getModularInstance(ref3);
   return getMetadata$1(ref3);
 }
@@ -2528,7 +3349,7 @@ function listAll(ref3) {
   ref3 = getModularInstance(ref3);
   return listAll$1(ref3);
 }
-function getDownloadURL(ref3) {
+function getDownloadURL2(ref3) {
   ref3 = getModularInstance(ref3);
   return getDownloadURL$1(ref3);
 }
@@ -2545,7 +3366,7 @@ function _getChild(ref3, childPath) {
 }
 function getStorage(app = getApp(), bucketUrl) {
   app = getModularInstance(app);
-  const storageProvider = _getProvider(app, STORAGE_TYPE);
+  const storageProvider = _getProvider(app, STORAGE_TYPE2);
   const storageInstance = storageProvider.getImmediate({
     identifier: bucketUrl
   });
@@ -2565,78 +3386,26 @@ function getStream(ref3, maxDownloadSizeBytes) {
   ref3 = getModularInstance(ref3);
   return getStreamInternal(ref3, maxDownloadSizeBytes);
 }
-function factory(container, {
+function factory2(container, {
   instanceIdentifier: url
 }) {
   const app = container.getProvider("app").getImmediate();
   const authProvider = container.getProvider("auth-internal");
   const appCheckProvider = container.getProvider("app-check-internal");
-  return new FirebaseStorageImpl(app, authProvider, appCheckProvider, url, SDK_VERSION);
+  return new FirebaseStorageImpl2(app, authProvider, appCheckProvider, url, SDK_VERSION);
 }
-function registerStorage() {
+function registerStorage2() {
   _registerComponent(new Component(
-    STORAGE_TYPE,
-    factory,
+    STORAGE_TYPE2,
+    factory2,
     "PUBLIC"
     /* ComponentType.PUBLIC */
   ).setMultipleInstances(true));
-  registerVersion(name, version);
+  registerVersion(name2, version2);
 }
-registerStorage();
+registerStorage2();
 
-// ../node_modules/rxfire/storage/index.esm.js
-var import_rxjs = __toESM(require_cjs());
-var import_operators = __toESM(require_operators());
-function fromTask(task) {
-  return new import_rxjs.Observable(function(subscriber) {
-    var lastSnapshot = null;
-    var complete = false;
-    var hasError = false;
-    var error = null;
-    var emit = function(snapshot) {
-      lastSnapshot = snapshot;
-      schedule();
-    };
-    var id = null;
-    var schedule = function() {
-      if (!id) {
-        id = setTimeout(function() {
-          id = null;
-          if (lastSnapshot) subscriber.next(lastSnapshot);
-          if (complete) subscriber.complete();
-          if (hasError) subscriber.error(error);
-        });
-      }
-    };
-    subscriber.add(function() {
-      if (id) clearTimeout(id);
-    });
-    emit(task.snapshot);
-    subscriber.add(task.on("state_changed", emit));
-    subscriber.add((0, import_rxjs.from)(task).subscribe({
-      next: emit,
-      error: function(err) {
-        hasError = true;
-        error = err;
-        schedule();
-      },
-      complete: function() {
-        complete = true;
-        schedule();
-      }
-    }));
-  });
-}
-function percentage(task) {
-  return fromTask(task).pipe((0, import_operators.map)(function(snapshot) {
-    return {
-      progress: snapshot.bytesTransferred / snapshot.totalBytes * 100,
-      snapshot
-    };
-  }));
-}
-
-// ../node_modules/@angular/fire/fesm2022/angular-fire-storage.mjs
+// node_modules/@angular/fire/fesm2022/angular-fire-storage.mjs
 var Storage = class {
   constructor(auth) {
     return auth;
@@ -2715,8 +3484,8 @@ var connectStorageEmulator2 = ɵzoneWrap(connectStorageEmulator, true);
 var deleteObject2 = ɵzoneWrap(deleteObject, true);
 var getBlob2 = ɵzoneWrap(getBlob, true);
 var getBytes2 = ɵzoneWrap(getBytes, true);
-var getDownloadURL2 = ɵzoneWrap(getDownloadURL, true);
-var getMetadata2 = ɵzoneWrap(getMetadata, true);
+var getDownloadURL3 = ɵzoneWrap(getDownloadURL2, true);
+var getMetadata3 = ɵzoneWrap(getMetadata2, true);
 var getStorage2 = ɵzoneWrap(getStorage, true);
 var getStream2 = ɵzoneWrap(getStream, true);
 var list2 = ɵzoneWrap(list, true);
@@ -2724,31 +3493,31 @@ var listAll2 = ɵzoneWrap(listAll, true);
 var ref2 = ɵzoneWrap(ref, true);
 var updateMetadata2 = ɵzoneWrap(updateMetadata, true);
 var uploadBytes2 = ɵzoneWrap(uploadBytes, true);
-var uploadBytesResumable2 = ɵzoneWrap(uploadBytesResumable, true);
-var uploadString2 = ɵzoneWrap(uploadString, true);
+var uploadBytesResumable3 = ɵzoneWrap(uploadBytesResumable2, true);
+var uploadString3 = ɵzoneWrap(uploadString2, true);
 export {
   Storage,
-  StorageError,
-  StorageErrorCode,
+  StorageError2 as StorageError,
+  StorageErrorCode2 as StorageErrorCode,
   StorageInstances,
   StorageModule,
   StringFormat,
   FbsBlob as _FbsBlob,
-  Location as _Location,
+  Location2 as _Location,
   TaskEvent as _TaskEvent,
   TaskState as _TaskState,
   UploadTask as _UploadTask,
   dataFromString as _dataFromString,
   _getChild,
-  invalidArgument as _invalidArgument,
-  invalidRootOperation as _invalidRootOperation,
+  invalidArgument2 as _invalidArgument,
+  invalidRootOperation2 as _invalidRootOperation,
   connectStorageEmulator2 as connectStorageEmulator,
   deleteObject2 as deleteObject,
   fromTask2 as fromTask,
   getBlob2 as getBlob,
   getBytes2 as getBytes,
-  getDownloadURL2 as getDownloadURL,
-  getMetadata2 as getMetadata,
+  getDownloadURL3 as getDownloadURL,
+  getMetadata3 as getMetadata,
   getStorage2 as getStorage,
   getStream2 as getStream,
   list2 as list,
@@ -2759,10 +3528,422 @@ export {
   storageInstance$,
   updateMetadata2 as updateMetadata,
   uploadBytes2 as uploadBytes,
-  uploadBytesResumable2 as uploadBytesResumable,
-  uploadString2 as uploadString
+  uploadBytesResumable3 as uploadBytesResumable,
+  uploadString3 as uploadString
 };
 /*! Bundled license information:
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2022 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2021 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2019 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2021 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2019 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2017 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2020 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
+
+@firebase/storage/dist/node-esm/index.node.esm.js:
+  (**
+   * @license
+   * Copyright 2021 Google LLC
+   *
+   * Licensed under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License.
+   * You may obtain a copy of the License at
+   *
+   *   http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software
+   * distributed under the License is distributed on an "AS IS" BASIS,
+   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   * See the License for the specific language governing permissions and
+   * limitations under the License.
+   *)
 
 @firebase/storage/dist/node-esm/index.node.esm.js:
   (**
