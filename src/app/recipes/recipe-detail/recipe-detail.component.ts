@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
-import { RecipeService } from '../../services/recipe.service';
-import { Recipe } from '../../models/recipe.model';
+import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RECIPES } from '../../../assets/recipes/pasta';
+import { Recipe, Ingredient } from '../../models/recipe.model';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -15,42 +15,50 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule],
 })
 export class RecipeDetailComponent implements OnInit {
-  recipe$!: Observable<Recipe | undefined>;
+  recipe$!: Observable<Recipe>;
+  localRecipes = RECIPES;
   portion: number = 1;
   adjustedIngredients: string[] = [];
 
-  constructor(private route: ActivatedRoute, private recipeService: RecipeService) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.recipe$ = this.route.paramMap.pipe(
-      map((params) => {
-        const id = params.get('id');
-        console.log('Geladene ID:', id); // Debugging
-        return id;
-      }),
-      switchMap((id) => this.recipeService.getRecipeById(id!))
+      map((params) => params.get('id')!),
+      map((id) => {
+        const localRecipe = this.localRecipes.find((recipe) => recipe.id === id);
+        if (!localRecipe) {
+          console.error('Rezept nicht gefunden:', id);
+          throw new Error('Rezept nicht gefunden');
+        }
+        return localRecipe;
+      })
     );
 
     this.recipe$.subscribe((recipe) => {
       if (recipe) {
+        console.log('Loaded Recipe:', recipe);
         this.portion = recipe.portion || 1;
-        this.updateIngredients(recipe.ingredients);
+        this.updateIngredients(recipe);
       }
     });
   }
 
-  updateIngredients(ingredients: string[]): void {
-    this.adjustedIngredients = ingredients.map((ingredient) =>
-      ingredient.replace(/\d+/g, (match) => {
-        const adjustedAmount = (+match * this.portion) / 4;
-        return adjustedAmount.toFixed(1);
-      })
-    );
+  updateIngredients(recipe: Recipe): void {
+    if (!recipe.ingredients || !Array.isArray(recipe.ingredients)) {
+      console.error('Ingredients are not an array or are missing.');
+      this.adjustedIngredients = [];
+      return;
+    }
+
+    this.adjustedIngredients = recipe.ingredients.map((ingredient) => {
+      return `${ingredient.amount * this.portion} ${ingredient.unit} ${ingredient.name}`;
+    });
   }
 
   onPortionChange(): void {
     this.recipe$.subscribe((recipe) => {
-      if (recipe) this.updateIngredients(recipe.ingredients);
+      this.updateIngredients(recipe);
     });
   }
 }

@@ -64,7 +64,7 @@ import {
   isReactNative,
   isValidFormat,
   jsonEval,
-  map as map2,
+  map,
   querystring,
   registerVersion,
   safeGet,
@@ -100,7 +100,7 @@ import {
   distinct,
   distinctUntilChanged,
   from,
-  map,
+  map as map2,
   of,
   scan,
   skipWhile,
@@ -8844,7 +8844,7 @@ function objectVal(query3, options) {
   if (options === void 0) {
     options = {};
   }
-  return fromRef(query3, ListenEvent.value).pipe(map(function(change) {
+  return fromRef(query3, ListenEvent.value).pipe(map2(function(change) {
     return changeToData(change, options);
   }));
 }
@@ -8873,7 +8873,7 @@ function stateChanges(query3, options) {
   return merge.apply(void 0, childEvent$);
 }
 function get2(query3) {
-  return from(get(query3)).pipe(map(function(snapshot) {
+  return from(get(query3)).pipe(map2(function(snapshot) {
     var event = ListenEvent.value;
     return {
       snapshot,
@@ -8899,7 +8899,7 @@ function listVal(query3, options) {
   if (options === void 0) {
     options = {};
   }
-  return list(query3).pipe(map(function(arr) {
+  return list(query3).pipe(map2(function(arr) {
     return arr.map(function(change) {
       return changeToData(change, options);
     });
@@ -8993,7 +8993,7 @@ function auditTrail(query3, options) {
   return waitForLoaded(query3, auditTrail$);
 }
 function loadedData(query3) {
-  return fromRef(query3, ListenEvent.value).pipe(map(function(data) {
+  return fromRef(query3, ListenEvent.value).pipe(map2(function(data) {
     var lastKeyToLoad;
     data.snapshot.forEach(function(child4) {
       lastKeyToLoad = child4.key;
@@ -9011,7 +9011,7 @@ function waitForLoaded(query3, snap$) {
     withLatestFrom(snap$),
     // Get the latest values from the "loaded" and "child" datasets
     // We can use both datasets to form an array of the latest values.
-    map(function(_a2) {
+    map2(function(_a2) {
       var loaded = _a2[0], changes = _a2[1];
       var lastKeyToLoad = loaded.lastKeyToLoad;
       var loadedKeys = changes.map(function(change) {
@@ -9031,7 +9031,7 @@ function waitForLoaded(query3, snap$) {
     }),
     // Pluck off the meta data because the user only cares
     // to iterate through the snapshots
-    map(function(meta) {
+    map2(function(meta) {
       return meta.changes;
     })
   );
@@ -13065,7 +13065,7 @@ var IndexMap2 = class _IndexMap {
    * Ensure that this node is properly tracked in any indexes that we're maintaining
    */
   addToIndexes(namedNode, existingChildren) {
-    const newIndexes = map2(this.indexes_, (indexedChildren, indexName) => {
+    const newIndexes = map(this.indexes_, (indexedChildren, indexName) => {
       const index = safeGet(this.indexSet_, indexName);
       assert(index, "Missing index implementation for " + indexName);
       if (indexedChildren === fallbackObject2) {
@@ -13099,7 +13099,7 @@ var IndexMap2 = class _IndexMap {
    * Create a new IndexMap instance with the given value removed
    */
   removeFromIndexes(namedNode, existingChildren) {
-    const newIndexes = map2(this.indexes_, (indexedChildren) => {
+    const newIndexes = map(this.indexes_, (indexedChildren) => {
       if (indexedChildren === fallbackObject2) {
         return indexedChildren;
       } else {
@@ -16878,14 +16878,14 @@ function repoOnDataUpdate2(repo, pathString, data, isMerge, tag) {
   let events = [];
   if (tag) {
     if (isMerge) {
-      const taggedChildren = map2(data, (raw) => nodeFromJSON2(raw));
+      const taggedChildren = map(data, (raw) => nodeFromJSON2(raw));
       events = syncTreeApplyTaggedQueryMerge2(repo.serverSyncTree_, path, taggedChildren, tag);
     } else {
       const taggedSnap = nodeFromJSON2(data);
       events = syncTreeApplyTaggedQueryOverwrite2(repo.serverSyncTree_, path, taggedSnap, tag);
     }
   } else if (isMerge) {
-    const changedChildren = map2(data, (raw) => nodeFromJSON2(raw));
+    const changedChildren = map(data, (raw) => nodeFromJSON2(raw));
     events = syncTreeApplyServerMerge2(repo.serverSyncTree_, path, changedChildren);
   } else {
     const snap = nodeFromJSON2(data);

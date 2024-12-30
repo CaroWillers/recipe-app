@@ -3,9 +3,9 @@
 		class="container">
 		<!-- Suchleiste -->
 		<div class="search-bar-desktop">
-			<div class="logo">
-				<img src="assets/logo/LogoAnotherSpoonfulGreen.png" alt="Logo von Another Spoonful"/>
-			</div>
+			<div routerLink="/" class="logo"> 
+          <img src="assets/logo/LogoAnotherSpoonfulGreen.png" alt="Logo von Another Spoonful" />
+      </div>
 			<div class="search-input-container">
 				<input type="text" placeholder="Finde Dein Rezept" [(ngModel)]="searchService.searchQuery" (keyup)="searchService.onSearch()"/>
 				<img src="assets/icons/search-grey.svg" alt="Such-Icon" class="search-icon"/>
@@ -33,11 +33,17 @@
   <button mat-button routerLink="/recipes/casseroles" class="custom-button">
     Aufläufe
   </button>
-
+ 
   <!-- Pasta -->
-  <button mat-button routerLink="/recipes/pasta" class="custom-button">
-    Pasta
-  </button>
+  <button
+  mat-button
+  [routerLink]="['/category', 'Pasta']"
+  class="custom-button" 
+>
+  Pasta
+</button>
+
+
 
   <!-- Hauptgerichte Dropdown -->
   <button mat-button [matMenuTriggerFor]="mainDishesMenu" class="custom-button">
@@ -45,7 +51,9 @@
     <mat-icon>arrow_drop_down</mat-icon>
   </button>
   <mat-menu #mainDishesMenu="matMenu" class="custom-menu">
-    <button mat-menu-item routerLink="/recipes/meat">Fleisch</button>
+    <button mat-menu-item [routerLink]="['/category', 'Fleisch']">
+      Fleisch
+    </button>    
     <button mat-menu-item routerLink="/recipes/fish">Fisch</button>
     <button mat-menu-item routerLink="/recipes/veggie">Veggie</button>
   </mat-menu>

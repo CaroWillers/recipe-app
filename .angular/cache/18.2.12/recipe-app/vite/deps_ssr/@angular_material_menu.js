@@ -1,5 +1,12 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger
+} from "./chunk-Z74VEWXG.js";
+import {
   BidiModule,
   DOWN_ARROW,
   Directionality,
@@ -29,13 +36,6 @@ import {
   normalizePassiveListenerOptions,
   supportsScrollBehavior
 } from "./chunk-PHZILAAZ.js";
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger
-} from "./chunk-Z74VEWXG.js";
 import {
   CommonModule,
   DOCUMENT,

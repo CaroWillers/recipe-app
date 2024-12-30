@@ -6,12 +6,14 @@ import { Router } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { ViewEncapsulation } from '@angular/core';
+import { ViewEncapsulation } from '@angular/core'; 
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatMenuModule, MatButtonModule, MatIconModule],
+  imports: [CommonModule, FormsModule, MatMenuModule, MatButtonModule, MatIconModule, RouterModule,],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   encapsulation: ViewEncapsulation.None, 
@@ -56,5 +58,5 @@ export class HeaderComponent {
         this.dropdownStates[key] = false;
       });
     }
-  }
+  }   
 }

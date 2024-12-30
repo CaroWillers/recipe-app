@@ -1,10 +1,10 @@
 import {
-  MatCommonModule
-} from "./chunk-6VECABC2.js";
-import {
   DomSanitizer,
   HttpClient
 } from "./chunk-FAVRRE6S.js";
+import {
+  MatCommonModule
+} from "./chunk-6VECABC2.js";
 import {
   DOCUMENT
 } from "./chunk-KYUD4HKN.js";

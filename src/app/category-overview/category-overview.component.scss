@@ -1,0 +1,48 @@
+.category-container {
+    padding: 20px;
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+  
+    .recipe-card {
+      max-width: 300px; 
+      cursor: pointer;  
+  
+      .recipe-card-image {
+        width: 100%;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+      }
+    }
+
+.mat-mdc-card-title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mat-mdc-card-header {
+  display: flex;
+  padding: 16px 16px 0;
+  flex-direction: column;
+  }
+
+.mat-mdc-card-content {
+  padding: 16px;
+  }
+
+.mat-card-subtitle {
+   padding: 0;
+  }
+}
+  
